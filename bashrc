@@ -5,7 +5,7 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 #Use work aliases if on my work machine
-if -e [ ~/.workalias ];then
+if [ -e ~/.workalias ];then
 	source ~/.workalias
 fi
 
