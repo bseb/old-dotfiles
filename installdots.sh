@@ -17,4 +17,15 @@ rm -r ~/.vimrc ~/.screenrc ~/.bashrc
 ln -s ~/dotfiles/bashrc ~/.bashrc 
 ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/screenrc ~/.screenrc
+#Install Pathogen.vim to manage vim plugins and download the plugins I use
+#pathogen.vim
+if [ ! -e ~/.vim/autoload/pathogen.vim ];then
+	mkdir -p ~/.vim/autoload
+	mkdir -p ~/.vim/bundle
+	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+	#NerdTree
+	/usr/bin/git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle
+	#neocomplcache
+	/usr/bin/git clone git@github.com:Shougo/neocomplcache.vim.git ~/.vim/bundle
+fi
 
