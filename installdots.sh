@@ -24,8 +24,8 @@ if [ ! -e ~/.vim/autoload/pathogen.vim ];then
 	mkdir -p ~/.vim/bundle
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	#NerdTree
-	/usr/bin/git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle
+	/usr/bin/git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 	#neocomplcache
-	/usr/bin/git clone git@github.com:Shougo/neocomplcache.vim.git ~/.vim/bundle
+	/usr/bin/git clone git@github.com:Shougo/neocomplcache.vim.git ~/.vim/bundle/neocomplcache.vim
 fi
 
