@@ -8,8 +8,9 @@ fi
 if [ -e ~/.workalias ];then
 	source ~/.workalias
 fi
+#Fancy prompt
+export PS1="[\w][$(echo $?)]\n\u@\h\$>"
 
-# User specific aliases and functions
 #Vim keybindings instead of emacs
 set -o vi 
 #Ignore duplicate history entries 
