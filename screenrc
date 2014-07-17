@@ -6,7 +6,6 @@ bindkey -k k5 prev   # bind F5 to move to previous window
 bindkey -k k8 next   # bind F8 to move to next window
 
 
-escape ^Zz
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
 
