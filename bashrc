@@ -23,4 +23,5 @@ alias ll='ls -alht'
 if [ $TERM = "screen" ] || [ $TERM = "screen-256color" ]; then
    PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
    export PROMPT_COMMAND
+fi
 
