@@ -12,11 +12,16 @@ if [ "$(runlevel | awk '{ print $2 }')" -eq 5 ]; then
 	ln -s ~/dotfiles/xmodmap ~/.xmodmap
 fi
 # Remove existing dotfiles if present
-rm -r ~/.vimrc ~/.screenrc ~/.bashrc
+rm -r ~/.vimrc ~/.screenrc ~/.bashrc ~/.tmux.conf
 #Link files in dotfiles to where they go
 ln -s ~/dotfiles/bashrc ~/.bashrc 
 ln -s ~/dotfiles/vimrc ~/.vimrc
-ln -s ~/dotfiles/screenrc ~/.screenrc
+if [ -e /usr/bin/screen ];then
+	ln -s ~/dotfiles/screenrc ~/.screenrc
+fi
+if [ -e /usr/bin/tmux ];then
+	ln -s ~/dotfiles/tmux ~/.tmux.conf
+fi
 #Install Pathogen.vim to manage vim plugins and download the plugins I use
 #pathogen.vim
 if [ ! -e ~/.vim/autoload/pathogen.vim ];then

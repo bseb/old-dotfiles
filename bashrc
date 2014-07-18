@@ -20,8 +20,8 @@ export HISTCONTROL=ignoredups
 #Aliases 
 alias ll='ls -alht'
 # Hostname in GNUscreen Window Title 
-if [ $TERM = "screen" ] || [ $TERM = "screen-256color" ]; then
-   PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
-   export PROMPT_COMMAND
-fi
+#if [ $TERM = "screen" ] || [ $TERM = "screen-256color" ]; then
+#   PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
+#   export PROMPT_COMMAND
+#fi
 
