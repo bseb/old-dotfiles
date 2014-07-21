@@ -24,4 +24,5 @@ alias ll='ls -alht'
 #   PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
 #   export PROMPT_COMMAND
 #fi
-
+# Remap capslock to ctrl
+setxkbmap -option ctrl:nocaps
