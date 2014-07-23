@@ -9,8 +9,7 @@ if [ -e ~/.workalias ];then
 	source ~/.workalias
 fi
 #Fancy prompt
-export PS1="[\w][$(echo $?)]\n\u@\h\$>"
-
+export PS1="\[\e[00;37m\][\$?][\[\e[0m\]\[\e[00;32m\]\w\[\e[0m\]\[\e[00;37m\]][\[\e[0m\]\[\e[00;36m\]\t\[\e[0m\]\[\e[00;37m\]]\n\u@\[\e[0m\]\[\e[00;31m\]\h\[\e[0m\]\[\e[00;37m\]\\$>"
 #Vim keybindings instead of emacs
 set -o vi 
 #Ignore duplicate history entries 

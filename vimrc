@@ -21,5 +21,3 @@ call pathogen#helptags()
  nmap <silent> <c-j> :wincmd j<CR>
  nmap <silent> <c-h> :wincmd h<CR>
  nmap <silent> <c-l> :wincmd l<CR>
- "Edit remote files with rsync and sudo TODO
-let g:netrw_rsync_cmd='rsync  --rsync-path="sudo rsync"'
