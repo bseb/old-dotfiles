@@ -17,6 +17,8 @@ export HISTCONTROL=ignoredups
 #
 
 #Aliases 
+alias tmove='tmux detach && tmux attach'
+alias tma='tmux attach'
 alias ll='ls -alht'
 # Hostname in GNUscreen Window Title 
 #if [ $TERM = "screen" ] || [ $TERM = "screen-256color" ]; then
@@ -25,3 +27,4 @@ alias ll='ls -alht'
 #fi
 # Remap capslock to ctrl
 setxkbmap -option ctrl:nocaps
+
