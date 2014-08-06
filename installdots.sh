@@ -19,7 +19,7 @@ if [ -e /usr/bin/tmux ];then
 	ln -s ~/dotfiles/tmux ~/.tmux.conf
 fi
 #zsh setup, Thanks a lot Nathan
-if [ -e /usr/bin/zsh ];then 
+if [ -e /usr/bin/zsh ] || [ -e /bin/zsh ];then 
 	ln -s ~/dotfiles/oh-my-zsh ~/.oh-my-zsh
 	ln -s ~/dotfiles/zshrc ~/.zshrc
 fi
