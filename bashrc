@@ -20,6 +20,8 @@ export HISTCONTROL=ignoredups
 alias tmove='tmux detach && tmux attach'
 alias tma='tmux attach'
 alias ll='ls -alht'
+alias wq='exit'
+alias :wq='exit'
 # Hostname in GNUscreen Window Title 
 #if [ $TERM = "screen" ] || [ $TERM = "screen-256color" ]; then
 #   PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'

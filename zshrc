@@ -84,6 +84,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 alias tmove='tmux detach && tmux attach'
 alias tma='tmux attach'
 alias ll='ls -alht'
+alias wq='exit'
+alias :wq='exit'
 #remap capslock to ctrl
 setxkbmap -option ctrl:nocaps
 
