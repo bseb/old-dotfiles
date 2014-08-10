@@ -79,7 +79,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #Use work aliases if on my work machine
-#if [ -e ~/.workalias ];then
+if [ -e ~/.workalias ];then
         source ~/.workalias
 alias tmove='tmux detach && tmux attach'
 alias tma='tmux attach'
