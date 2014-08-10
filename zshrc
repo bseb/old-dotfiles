@@ -78,14 +78,14 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#Use work aliases if on my work machine
+# Use work aliases if on my work machine
 if [ -e ~/.workalias ];then
         source ~/.workalias
-alias tmove='tmux detach && tmux attach'
-alias tma='tmux attach'
-alias ll='ls -alht'
-alias wq='exit'
-alias :wq='exit'
+fi
+alias tmove="tmux detach && tmux attach"
+alias tma="tmux attach"
+alias ll="ls -alht"
+alias wq="exit"
+alias :wq="exit"
 #remap capslock to ctrl
 setxkbmap -option ctrl:nocaps
-
