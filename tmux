@@ -16,6 +16,10 @@ set -g base-index 1
 # colors|
 #--------
 set -g default-terminal "screen-256color"
+#---------------------------
+#Prevent Renaming of windows|
+#----------------------------
+set-option -g allow-rename off
 #-------------------------------
 # set scrollback history to 1000|
 #-------------------------------
