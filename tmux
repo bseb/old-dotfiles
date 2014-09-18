@@ -8,6 +8,11 @@ set -g prefix C-a
 #-----------------------------------
 unbind r
 bind r source-file ~/.tmux.conf
+#--------------------
+#Status Bar Settings|
+#-------------------
+set-option -g status-position top
+
 #--------------------------------------------------
 # start window numbering at 1 for easier switching|
 #-------------------------------------------------
