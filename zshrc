@@ -83,7 +83,7 @@ if [ -e ~/.workalias ];then
         source ~/.workalias
 fi
 alias tmove="tmux detach && tmux attach"
-alias tma="tmux attach"
+alias tma="tmux attach-session -t"
 alias ll="ls -alht"
 alias wq="exit"
 alias :wq="exit"
