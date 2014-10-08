@@ -33,5 +33,7 @@ if [ ! -e ~/.vim/autoload/pathogen.vim ];then
 	/usr/bin/git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 	#neocomplcache
 	/usr/bin/git clone git@github.com:Shougo/neocomplcache.vim.git ~/.vim/bundle/neocomplcache.vim
+	#Gotham Colors
+	/usr/bin/git clone git@github.com:whatyouhide/vim-gotham.git ~./vim/bundle/vim-gotham
 fi
 

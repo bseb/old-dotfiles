@@ -4,8 +4,9 @@
 set number 
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
-filetype plugin indent on
+filetype plugin on
 syntax on
+set tabstop=4
 "########
 "Plugins#
 "#######
@@ -21,3 +22,4 @@ call pathogen#helptags()
  nmap <silent> <c-j> :wincmd j<CR>
  nmap <silent> <c-h> :wincmd h<CR>
  nmap <silent> <c-l> :wincmd l<CR>
+colorscheme gotham 
