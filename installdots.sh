@@ -9,9 +9,9 @@ fi
 # Remove existing dotfiles if present
 rm -r ~/.vimrc ~/.screenrc ~/.bashrc ~/.tmux.conf
 #Link files in dotfiles to where they go
-ln -s ~/dotfiles/bashrc ~/.bashrc 
+ln -s ~/dotfiles/bashrc ~/.bashrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
-#Multiplexers a-gogo 
+#Multiplexers a-gogo
 if [ -e /usr/bin/screen ];then
 	ln -s ~/dotfiles/screenrc ~/.screenrc
 fi
@@ -19,7 +19,7 @@ if [ -e /usr/bin/tmux ];then
 	ln -s ~/dotfiles/tmux ~/.tmux.conf
 fi
 #zsh setup, Thanks a lot Nathan
-if [ -e /usr/bin/zsh ] || [ -e /bin/zsh ];then 
+if [ -e /usr/bin/zsh ] || [ -e /bin/zsh ];then
 	ln -s ~/dotfiles/oh-my-zsh ~/.oh-my-zsh
 	ln -s ~/dotfiles/zshrc ~/.zshrc
 fi
@@ -31,9 +31,11 @@ if [ ! -e ~/.vim/autoload/pathogen.vim ];then
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	#NerdTree
 	/usr/bin/git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-	#neocomplcache
-	/usr/bin/git clone git@github.com:Shougo/neocomplcache.vim.git ~/.vim/bundle/neocomplcache.vim
 	#Gotham Colors
 	/usr/bin/git clone git@github.com:whatyouhide/vim-gotham.git ~./vim/bundle/vim-gotham
+	#Syntastic
+	/usr/bin/git clone git@github.com:scrooloose/syntastic.git ~/.vim/bundle/syntastic
+	#vim-airline
+	/usr/bin/git clone git@github.com:bling/vim-airline.git ~/.vim/bundle/vim-airline
 fi
 

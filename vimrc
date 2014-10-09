@@ -22,4 +22,8 @@ call pathogen#helptags()
  nmap <silent> <c-j> :wincmd j<CR>
  nmap <silent> <c-h> :wincmd h<CR>
  nmap <silent> <c-l> :wincmd l<CR>
-colorscheme gotham 
+"#################
+"#Plugin Settings#
+"#################
+colorscheme gotham
+set laststatus=2
