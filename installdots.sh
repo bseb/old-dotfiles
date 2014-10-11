@@ -32,7 +32,7 @@ if [ ! -e ~/.vim/autoload/pathogen.vim ];then
 	#NerdTree
 	/usr/bin/git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 	#Gotham Colors
-	/usr/bin/git clone git@github.com:whatyouhide/vim-gotham.git ~./vim/bundle/vim-gotham
+	/usr/bin/git clone git@github.com:whatyouhide/vim-gotham.git ~/.vim/bundle/vim-gotham
 	#Syntastic
 	/usr/bin/git clone git@github.com:scrooloose/syntastic.git ~/.vim/bundle/syntastic
 	#vim-airline
