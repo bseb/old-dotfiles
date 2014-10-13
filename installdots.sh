@@ -37,5 +37,7 @@ if [ ! -e ~/.vim/autoload/pathogen.vim ];then
 	/usr/bin/git clone git@github.com:scrooloose/syntastic.git ~/.vim/bundle/syntastic
 	#vim-airline
 	/usr/bin/git clone git@github.com:bling/vim-airline.git ~/.vim/bundle/vim-airline
+	#Taglist
+	/usr/bin/git clone https://github.com/vim-scripts/taglist.vim ~/.vim/bundle/taglist.vim
 fi
 
