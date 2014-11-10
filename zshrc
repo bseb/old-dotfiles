@@ -90,6 +90,6 @@ alias :wq="exit"
 #remap capslock to ctrl
 setxkbmap -option ctrl:nocaps
 #Fix tab completion weirdness
-export LC_ALL=“en_US.UTF-8”
+export LC_ALL=en_US.UTF-8
 #Term Settings
 export TERM=xterm-256color
