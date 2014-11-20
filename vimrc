@@ -4,7 +4,7 @@
 set number 
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
-filetype plugin on
+filetype off
 syntax on
 set tabstop=4
 "########
@@ -14,6 +14,8 @@ set tabstop=4
 execute pathogen#infect()
 "generate helptags for everything in ‘runtimepath’
 call pathogen#helptags()
+filetype plugin indent on 
+syntax on
 "###########
 "Navigation#
 "##########
