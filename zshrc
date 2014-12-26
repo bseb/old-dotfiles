@@ -87,6 +87,8 @@ alias tma="tmux attach-session -t"
 alias ll="ls -alht"
 alias wq="exit"
 alias :wq="exit"
+unset GREP_OPTIONS
+alias grep="grep --color=auto --exclude-dir=.cvs --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn"
 #remap capslock to ctrl
 setxkbmap -option ctrl:nocaps
 #Fix tab completion weirdness
