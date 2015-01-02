@@ -27,5 +27,4 @@ syntax on
 "#################
 "#Plugin Settings#
 "#################
-colorscheme gotham
 set laststatus=2

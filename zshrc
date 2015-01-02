@@ -94,4 +94,5 @@ setxkbmap -option ctrl:nocaps
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
 #Term Settings
-export TERM=screen-256color
+export TERM=xterm-256color
+[ -n "$TMUX" ] && export TERM=screen-256color
