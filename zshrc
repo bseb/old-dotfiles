@@ -78,6 +78,7 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# aliases and functions
 # Use work aliases if on my work machine
 if [ -e ~/.workalias ];then
         source ~/.workalias
@@ -89,6 +90,7 @@ alias wq="exit"
 alias :wq="exit"
 unset GREP_OPTIONS
 alias grep="grep --color=auto --exclude-dir=.cvs --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn"
+alias sshKeyUnlock='eval $(ssh-agent -s);ssh-add'
 #remap capslock to ctrl
 setxkbmap -option ctrl:nocaps
 #Fix tab completion weirdness
