@@ -7,10 +7,11 @@ if [ -e /etc/xdg/awesome/rc.lua ]; then
 	ln -s ~/dotfiles/rc.lua ~/.config/awesome/rc.lua
 fi
 # Remove existing dotfiles if present
-rm -r ~/.vimrc ~/.screenrc ~/.bashrc ~/.tmux.conf
+rm -r ~/.vimrc ~/.screenrc ~/.bashrc ~/.tmux.conf ~/.Xdefaults
 #Link files in dotfiles to where they go
 ln -s ~/dotfiles/bashrc ~/.bashrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
+ln -s ~/dotfiles/Xdefaults ~/.Xdefaults 
 #Multiplexers a-gogo
 if [ -e /usr/bin/screen ];then
 	ln -s ~/dotfiles/screenrc ~/.screenrc
