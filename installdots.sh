@@ -6,6 +6,11 @@ if [ -e /etc/xdg/awesome/rc.lua ]; then
 	rm -r ~/.config/awesome/rc.lua
 	ln -s ~/dotfiles/rc.lua ~/.config/awesome/rc.lua
 fi
+#How About i3wm
+if [ -e /usr/bin/i3 ];then
+		mkdir -p  ~/.i3
+	    ln -s ~/dotfiles/i3config ~/.i3/config
+fi
 # Remove existing dotfiles if present
 rm -r ~/.vimrc ~/.screenrc ~/.bashrc ~/.tmux.conf ~/.Xdefaults
 #Link files in dotfiles to where they go
