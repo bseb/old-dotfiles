@@ -41,6 +41,9 @@ bindsym $mod+space exec dmenu_run
 # Lock Screen
 bindsym $mod+Ctrl+z exec xscreensaver-command -lock
 
+#Borderless Windows
+new_window none
+hide_edge_borders both
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
