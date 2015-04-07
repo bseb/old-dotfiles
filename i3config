@@ -39,7 +39,7 @@ bindsym $mod+space exec i3-dmenu-desktop
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # Lock Screen
-bindsym $mod+Ctrl+z exec xscreensaver-command -lock
+bindsym $mod+Ctrl+z exec i3lock -c 000000
 
 #Borderless Windows
 new_window none
