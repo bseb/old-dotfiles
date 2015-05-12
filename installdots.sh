@@ -8,23 +8,24 @@ if [ -e /etc/xdg/awesome/rc.lua ]; then
 fi
 #How About i3wm
 if [ -e /usr/bin/i3 ];then
-		mkdir -p  ~/.i3
-	    ln -s ~/dotfiles/i3config ~/.i3/config
+	mkdir -p  ~/.i3
+    ln -s ~/dotfiles/i3config ~/.i3/config
 fi
 # Remove existing dotfiles if present
-rm -r ~/.vimrc ~/.screenrc ~/.bashrc ~/.tmux.conf ~/.Xdefaults
+rm -r ~/.vimrc ~/.screenrc ~/.bashrc ~/.Xdefaults
 #Link files in dotfiles to where they go
 ln -s ~/dotfiles/bashrc ~/.bashrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
-ln -s ~/dotfiles/Xdefaults ~/.Xdefaults 
+ln -s ~/dotfiles/Xdefaults ~/.Xdefaults
 #Multiplexers a-gogo
 if [ -e /usr/bin/screen ];then
 	ln -s ~/dotfiles/screenrc ~/.screenrc
 fi
 if [ -e /usr/bin/tmux ];then
+	rm -rf ~/.tmux.conf
 	ln -s ~/dotfiles/tmux ~/.tmux.conf
 fi
-#zsh setup, Thanks a lot Nathan
+#oh-my-zsh setup
 if [ -e /usr/bin/zsh ] || [ -e /bin/zsh ];then
 	ln -s ~/dotfiles/oh-my-zsh ~/.oh-my-zsh
 	ln -s ~/dotfiles/zshrc ~/.zshrc
@@ -37,14 +38,12 @@ if [ ! -e ~/.vim/autoload/pathogen.vim ];then
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	#NerdTree
 	/usr/bin/git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-	#Gotham Colors
-	/usr/bin/git clone git@github.com:whatyouhide/vim-gotham.git ~/.vim/bundle/vim-gotham
 	#Syntastic
 	/usr/bin/git clone git@github.com:scrooloose/syntastic.git ~/.vim/bundle/syntastic
 	#vim-airline
 	/usr/bin/git clone git@github.com:bling/vim-airline.git ~/.vim/bundle/vim-airline
 	#Taglist
-	/usr/bin/git clone https://github.com/vim-scripts/taglist.vim ~/.vim/bundle/taglist.vim
+	/usr/bin/git clone git@github.com/vim-scripts/taglist.vim ~/.vim/bundle/taglist.vim
 	#Python Mode
 	/usr/bin/git clone git://github.com/klen/python-mode.git ~/.vim/bundle/python-mode
 fi
