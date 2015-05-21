@@ -7,6 +7,8 @@ hi CursorLine term=bold cterm=bold guibg=Grey40
 filetype off
 syntax on
 set tabstop=4
+"Because I forget sudo frequently
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 "########
 "Plugins#
 "#######
