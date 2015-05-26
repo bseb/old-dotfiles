@@ -45,10 +45,10 @@ bindsym $mod+Ctrl+z exec i3lock -c 000000
 new_window pixel 4
 hide_edge_borders both
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+h focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 # move workspace to next monitor
 bindsym $mod+o move workspace to output right
 
