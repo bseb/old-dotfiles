@@ -4,8 +4,6 @@
 set number 
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
-filetype off
-syntax on
 set tabstop=4
 "Because I forget sudo frequently
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
@@ -16,7 +14,7 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 execute pathogen#infect()
 "generate helptags for everything in ‘runtimepath’
 call pathogen#helptags()
-filetype plugin indent on 
+filetype indent on 
 syntax on
 "###########
 "Navigation#
