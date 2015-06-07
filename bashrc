@@ -8,10 +8,6 @@ fi
 if [ -e ~/.workalias ];then
 	source ~/.workalias
 fi
-#Fancy prompt
-export PS1="\[\e[00;37m\][\$?][\[\e[0m\]\[\e[00;32m\]\w\[\e[0m\]\[\e[00;37m\]][\[\e[0m\]\[\e[00;34m\]\A\[\e[0m\]\[\e[00;37m\]]\n\u@\[\e[0m\]\[\e[00;31m\]\h\[\e[0m\]\[\e[00;37m\]\\$>\[\e[0m\]"
-#Vim keybindings instead of emacs
-set -o vi 
 #Ignore duplicate history entries 
 export HISTCONTROL=ignoredups
 #
