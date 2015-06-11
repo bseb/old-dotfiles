@@ -51,6 +51,7 @@ set-option -g display-panes-colour colour196 #orange
 
 # clock
 set-window-option -g clock-mode-colour colour40 #green
+
 #---------------------------
 #Prevent Renaming of windows|
 #----------------------------
@@ -98,3 +99,6 @@ bind -n M-Down select-pane -D
 bind -n S-Left previous-window
 bind -n S-Right next-window
 
+#Pane Sync Setup
+bind . setw synchronize-panes \; display "Pane sync: #{?pane_synchronized,on,off}"
+setw -qg  window-status-current-format " #W #{?pane_synchronized,<sync> ,}"

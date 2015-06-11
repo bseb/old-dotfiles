@@ -46,5 +46,7 @@ if [ ! -e ~/.vim/autoload/pathogen.vim ];then
 	/usr/bin/git clone git@github.com/vim-scripts/taglist.vim ~/.vim/bundle/taglist.vim
 	#Python Mode
 	/usr/bin/git clone git://github.com/klen/python-mode.git ~/.vim/bundle/python-mode
+	#Vim Fugitive
+	/usr/bin/git clone git@github.com:tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 fi
 
