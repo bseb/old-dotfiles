@@ -80,6 +80,10 @@ bindsym $mod+minus split v
 bindsym XF86MonBrightnessUp exec "/usr/bin/light -A 10"
 bindsym XF86MonBrightnessDown exec "/usr/bin/light -U 10"
 
+#Switch Display to Docking Station and back on T440s
+bindsym $mod+shift+d exec "/home/ben/bin/Docked.sh"
+bindsym $mod+shift+u exec "/home/ben/bin/Undocked.sh"
+
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
