@@ -1,9 +1,13 @@
 "#######################
 "General Look and Feel#
 "#####################
-set number 
+"Relative Line Numbers
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+"Highlighting
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
+"Duh
 set tabstop=4
 "Because I forget sudo frequently
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
