@@ -21,9 +21,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 "Start Vundle
 call vundle#begin()
 "Vundle use git(ssh) instead of http
-"Use ssh on my personal machines,default at work
+"Use git on my personal machines,default at work
 if $HOSTNAME != "defiant"
-	let g:vundle_default_git_proto = 'ssh'
+	let g:vundle_default_git_proto = 'git'
 endif
 "Plugins Managed by Vundle
 Plugin 'tpope/vim-fugitive'
