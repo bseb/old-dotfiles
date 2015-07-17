@@ -14,12 +14,23 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 "########
 "Plugins#
 "#######
-"Pathogen Load TODO make this check for installed pathogen
-execute pathogen#infect()
-"generate helptags for everything in ‘runtimepath’
-call pathogen#helptags()
-filetype indent on 
-syntax on
+"Vundle requirements
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+"Start Vundle
+call vundle#begin()
+"Vundle use git(ssh) instead of http
+let g:vundle_default_git_proto = 'git'
+"Plugins Managed by Vundle
+Plugin 'tpope/vim-fugitive'
+Plugin 'klen/python-mode'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+"End Vundle
+call vundle#end()
+filetype plugin indent on
 "###########
 "Navigation#
 "##########

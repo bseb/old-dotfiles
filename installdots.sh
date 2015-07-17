@@ -30,23 +30,10 @@ if [ -e /usr/bin/zsh ] || [ -e /bin/zsh ];then
 	ln -s ~/dotfiles/oh-my-zsh ~/.oh-my-zsh
 	ln -s ~/dotfiles/zshrc ~/.zshrc
 fi
-#Install Pathogen.vim to manage vim plugins and download the plugins I use
+#Install Vundle to manage Vim plugins
 #pathogen.vim
-if [ ! -e ~/.vim/autoload/pathogen.vim ];then
+if [ ! -e ~/.vim/bundle/Vundle.vim ];then
 	mkdir -p ~/.vim/autoload
 	mkdir -p ~/.vim/bundle
-	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-	#NerdTree
-	/usr/bin/git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-	#Syntastic
-	/usr/bin/git clone git@github.com:scrooloose/syntastic.git ~/.vim/bundle/syntastic
-	#vim-airline
-	/usr/bin/git clone git@github.com:bling/vim-airline.git ~/.vim/bundle/vim-airline
-	#Taglist
-	/usr/bin/git clone git@github.com/vim-scripts/taglist.vim ~/.vim/bundle/taglist.vim
-	#Python Mode
-	/usr/bin/git clone git://github.com/klen/python-mode.git ~/.vim/bundle/python-mode
-	#Vim Fugitive
-	/usr/bin/git clone git@github.com:tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
+	/usr/bin/git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
-
