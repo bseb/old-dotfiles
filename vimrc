@@ -31,6 +31,7 @@ Plugin 'klen/python-mode'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ekalinin/Dockerfile.vim'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
