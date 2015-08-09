@@ -90,7 +90,7 @@ alias wq="exit"
 alias :wq="exit"
 unset GREP_OPTIONS
 alias grep="grep --color=auto --exclude-dir=.cvs --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn"
-alias sshKeyUnlock='eval $(ssh-agent -s);ssh-add'
+#alias sshKeyUnlock="$(ssh-agent -s;for key in $(ls ~/.ssh | egrep -v '(authorized_keys|config|*.pub|known_hosts)'); ssh-add ~/.ssh/${key})"
 #remap capslock to ctrl
 setxkbmap -option ctrl:nocaps
 #Fix tab completion weirdness

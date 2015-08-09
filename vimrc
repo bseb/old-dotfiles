@@ -35,6 +35,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
+syntax on
 "###########
 "Navigation#
 "##########
