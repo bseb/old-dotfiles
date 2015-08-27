@@ -173,3 +173,5 @@ bar {
 }
 #Put my wallpaper back
 exec ~/.fehbg &
+#Start Network Manager Applet
+exec --no-startup-id nm-applet
