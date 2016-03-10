@@ -3,7 +3,7 @@ URxvt*scrollBar: false
 URxvt.saveLines: 5000
 URxvt*termName: rxvt
 URxvt*loginShell: true
-URxvt.urlLauncher: firefox
+URxvt.urlLauncher:google-chrome-stable
 URxvt.perl-ext-common: default,clipboard
 URxvt.iso14755: False
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
