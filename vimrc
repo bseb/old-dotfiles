@@ -27,10 +27,12 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'vimwiki/vimwiki'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
 syntax on
+let mapleader = "\<Space>"
 "###########
 "Navigation#
 "##########
