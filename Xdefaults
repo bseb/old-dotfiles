@@ -3,8 +3,10 @@ URxvt*scrollBar: false
 URxvt.saveLines: 5000
 URxvt*termName: rxvt
 URxvt*loginShell: true
-URxvt.urlLauncher:google-chrome-stable
-URxvt.perl-ext-common: default,clipboard
+URxvt.perl-ext-common: default,clipboard,matcher
+URxvt.matcher.button 1
+URxvt.matcher.rend.0: Uline Bold fg5
+URxvt.url-launcher: /usr/bin/google-chrome-stable
 URxvt.iso14755: False
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
