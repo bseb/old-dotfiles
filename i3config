@@ -181,7 +181,8 @@ bar {
         status_command py3status -c ~/.i3/status.conf
 }
 #Put my wallpaper back
-exec ~/.fehbg &
+#exec ~/.fehbg &
+exec nitrogen --restore &
 #Start Network Manager Applet
 exec --no-startup-id nm-applet
 exec --no-startup-id yubioauth
