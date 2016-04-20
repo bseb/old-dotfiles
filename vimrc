@@ -28,6 +28,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'vimwiki/vimwiki'
+Plugin 'pearofducks/ansible-vim'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
