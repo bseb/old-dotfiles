@@ -21,34 +21,37 @@ set -g base-index 1
 # colors|
 #--------
 set -g default-terminal "screen-256color"
-#### COLOUR (Solarized dark)
-# default statusbar colors
-set-option -g status-bg colour235 #base02
-set-option -g status-fg colour130 #yellow
-set-option -g status-attr default
+# panes
+set -g pane-border-fg colour0
+set -g pane-active-border-fg colour238
 
-# default window title colors
-set-window-option -g window-status-fg colour33 #base0
-set-window-option -g window-status-bg default
-#set-window-option -g window-status-attr dim
+# toggle statusbar
+bind-key b set-option status
 
-# active window title colors
-set-window-option -g window-status-current-fg colour196 #orange
-set-window-option -g window-status-current-bg default
-#set-window-option -g window-status-current-attr bright
+# status line
+set -g status-justify left
+set -g status-bg default
+set -g status-fg default
+set -g status-interval 2
 
-# pane border
-set-option -g pane-border-fg colour235 #base02
-set-option -g pane-active-border-fg colour46 #base01
+# messaging
+set -g message-fg black
+set -g message-bg yellow
+set -g message-command-fg blue
+set -g message-command-bg black
+set -g automatic-rename on
 
-# message text
-set-option -g message-bg colour235 #base02
-set-option -g message-fg colour196 #orange
+# window mode
+setw -g mode-bg colour6
+setw -g mode-fg colour0
 
-# pane number display
-set-option -g display-panes-active-colour colour20 #blue
-set-option -g display-panes-colour colour196 #orange
-
+# colors
+setw -g window-status-format "#[fg=colour3] •#[fg=colour8] #W "
+setw -g window-status-current-format "#[fg=colour2] •#[fg=colour7] #W "
+setw -g window-status-current-attr dim
+set -g status-justify centre
+set -g status-left "  #[fg=colour3]• #[fg=colour2]• #[fg=colour4]•"
+set -g status-right " #[fg=colour4] •#[fg=colour8] #S  "
 # clock
 set-window-option -g clock-mode-colour colour40 #green
 
