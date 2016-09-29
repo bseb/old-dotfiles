@@ -1,4 +1,4 @@
-#----------------------------------------------------
+#---------------------------------------------------
 #Set the prefix to the right thing, clearly C-a     |
 #----------------------------------------------------
 unbind C-b
@@ -104,4 +104,4 @@ bind -n S-Right next-window
 
 #Pane Sync Setup
 bind . setw synchronize-panes \; display "Pane sync: #{?pane_synchronized,on,off}"
-setw -qg  window-status-current-format " #W #{?pane_synchronized,<sync> ,}"
+setw -qg window-status-current-format " #W #{?pane_synchronized,<sync> ,}"
