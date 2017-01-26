@@ -1,8 +1,7 @@
 "#######################
 "General Look and Feel#
 "#####################
-"Relative Line Numbers
-autocmd InsertEnter * :set number
+set number
 autocmd InsertLeave * :set relativenumber
 "Highlighting
 set cursorline
