@@ -5,7 +5,13 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="candy"
+ZSH_THEME="powerline"
+POWERLINE_RIGHT_A="exit-status-on-fail"
+POWERLINE_PATH="short"
+POWERLINE_RIGHT_B="none"
+
+# cwd for tmux powerline
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -45,7 +51,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pip python virtualenvwrapper zsh-syntax-highlighting docker)
+plugins=(git pip python virtualenvwrapper zsh-syntax-highlighting docker vagrant) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,9 +96,9 @@ alias wq="exit"
 alias :wq="exit"
 unset GREP_OPTIONS
 alias grep="grep --color=auto --exclude-dir=.cvs --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn"
-#alias sshKeyUnlock="$(ssh-agent -s;for key in $(ls ~/.ssh | egrep -v '(authorized_keys|config|*.pub|known_hosts)'); ssh-add ~/.ssh/${key})"
+alias sshKeyUnlock="eval `ssh-agent -s` ; ssh-add"
 #remap capslock to ctrl
-setxkbmap -option ctrl:nocaps
+#setxkbmap -option ctrl:nocaps
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
 #Term Settings

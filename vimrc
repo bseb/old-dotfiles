@@ -29,6 +29,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'pearofducks/ansible-vim'
+Plugin 'rodjek/vim-puppet'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
@@ -45,4 +46,11 @@ let mapleader = "\<Space>"
 "#################
 "#Plugin Settings#
 "#################
+"Airline
 set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_gutter = '%= %{strftime("%R")}'
+let g:airline_powerline_fonts = 1
+"Fugitive
+set statusline=%{fugitive#statusline()}
+

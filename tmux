@@ -20,7 +20,7 @@ set -g base-index 1
 #--------
 # colors|
 #--------
-set -g default-terminal "screen-256color"
+#set -g default-terminal "screen-256color"
 # panes
 set -g pane-border-fg colour0
 set -g pane-active-border-fg colour238
@@ -46,14 +46,14 @@ setw -g mode-bg colour6
 setw -g mode-fg colour0
 
 # colors
-setw -g window-status-format "#[fg=colour3] •#[fg=colour8] #W "
-setw -g window-status-current-format "#[fg=colour2] •#[fg=colour7] #W "
-setw -g window-status-current-attr dim
-set -g status-justify centre
-set -g status-left "  #[fg=colour3]• #[fg=colour2]• #[fg=colour4]•"
-set -g status-right " #[fg=colour4] •#[fg=colour8] #S  "
+#setw -g window-status-format "#[fg=colour3] •#[fg=colour8] #W "
+#setw -g window-status-current-format "#[fg=colour2] •#[fg=colour7] #W "
+#setw -g window-status-current-attr dim
+#set -g status-justify centre
+#set -g status-left "  #[fg=colour3]• #[fg=colour2]• #[fg=colour4]•"
+#set -g status-right " #[fg=colour4] •#[fg=colour8] #S  "
 # clock
-set-window-option -g clock-mode-colour colour40 #green
+#set-window-option -g clock-mode-colour colour40 #green
 
 #---------------------------
 #Prevent Renaming of windows|
@@ -105,3 +105,14 @@ bind -n S-Right next-window
 #Pane Sync Setup
 bind . setw synchronize-panes \; display "Pane sync: #{?pane_synchronized,on,off}"
 setw -qg window-status-current-format " #W #{?pane_synchronized,<sync> ,}"
+
+#Powerline setup
+set-option -g status on
+set-option -g status-interval 2
+set-option -g status-justify "centre"
+set-option -g status-left-length 60
+set-option -g status-right-length 90
+set-option -g status-left "#(~/dotfiles/tmux-powerline/powerline.sh left)"
+set-option -g status-right "#(~/dotfiles/tmux-powerline/powerline.sh right)"
+#set-window-option -g window-status-current-format "#[fg=colour235, bg=colour27]•#[fg=colour255, bg=colour27] #I • #W #[fg=colour27, bg=colour235]•"
+
