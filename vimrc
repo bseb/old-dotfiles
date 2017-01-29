@@ -2,7 +2,6 @@
 "General Look and Feel#
 "#####################
 set number
-autocmd InsertLeave * :set relativenumber
 "Highlighting
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40

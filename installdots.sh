@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+ln -s ~/dotfiles/oh-my-zsh-powerline-theme ~/.oh-my-zsh/themes/powerline.zsh-theme
+git submodule update ~/dotfiles/*
 #Are we using awesomewm on this machine?
 if [ -e /etc/xdg/awesome/rc.lua ]; then
 	mkdir -p ~/.config/awesome
@@ -12,7 +15,7 @@ if [ -e /usr/bin/i3 ];then
     ln -s ~/dotfiles/i3config ~/.i3/config
 fi
 # Remove existing dotfiles if present
-rm -r ~/.vimrc ~/.screenrc ~/.bashrc ~/.Xdefaults
+rm -rf ~/.vimrc ~/.screenrc ~/.bashrc ~/.Xdefaults ~/.tmux.conf ~/.zshrc &> /dev/null
 #Link files in dotfiles to where they go
 ln -s ~/dotfiles/bashrc ~/.bashrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
@@ -22,7 +25,6 @@ if [ -e /usr/bin/screen ];then
 	ln -s ~/dotfiles/screenrc ~/.screenrc
 fi
 if [ -e /usr/bin/tmux ];then
-	rm -rf ~/.tmux.conf
 	ln -s ~/dotfiles/tmux ~/.tmux.conf
 fi
 #oh-my-zsh setup
