@@ -4,7 +4,7 @@
 set number
 "Highlighting
 set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey40
+hi CursorLine term=bold ctermbg=233 cterm=bold guibg=Grey40
 "Duh
 set tabstop=4
 "Because I forget sudo frequently
