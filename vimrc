@@ -41,11 +41,10 @@ let mapleader = "\<Space>"
  nmap <silent> <c-j> :wincmd j<CR>
  nmap <silent> <c-h> :wincmd h<CR>
  nmap <silent> <c-l> :wincmd l<CR>
-" Mappings to access buffers (don't use "\p" because a
-" delay before pressing "p" would accidentally paste).
-" \l       : list buffers
-" \b \f \g : go back/forward/last-used
-" \1 \2 \3 : go to buffer 1/2/3 etc
+"Buffers, prefix is leader
+" l       : list buffers
+" b f g : go back/forward/last-used
+" 1 2 3 : go to buffer 1/2/3 etc
 nnoremap <Leader>l :ls<CR>
 nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>f :bn<CR>
@@ -69,6 +68,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_gutter = '%= %{strftime("%R")}'
 let g:airline_powerline_fonts = 1
 "Fugitive
-set statusline=%{fugitive#statusline()}%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set statusline=%{fugitive#statusline()}
 "NerdTree
 map <F2> :NERDTreeToggle<CR>
