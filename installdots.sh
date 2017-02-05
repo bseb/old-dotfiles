@@ -2,7 +2,7 @@
 
 
 ln -s ~/dotfiles/oh-my-zsh-powerline-theme ~/.oh-my-zsh/themes/powerline.zsh-theme
-git submodule update ~/dotfiles/*
+#git submodule update ~/dotfiles/*
 #Are we using awesomewm on this machine?
 if [ -e /etc/xdg/awesome/rc.lua ]; then
 	mkdir -p ~/.config/awesome
