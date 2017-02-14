@@ -26,3 +26,5 @@ alias :wq='exit'
 # Remap capslock to ctrl
 setxkbmap -option ctrl:nocaps
 
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin

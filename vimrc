@@ -47,6 +47,7 @@ let mapleader = "\<Space>"
 " 1 2 3 : go to buffer 1/2/3 etc
 nnoremap <Leader>l :ls<CR>
 nnoremap <Leader>b :bp<CR>
+nnoremap <Leader>x :bd<CR>
 nnoremap <Leader>f :bn<CR>
 nnoremap <Leader>g :e#<CR>
 nnoremap <Leader>1 :1b<CR>

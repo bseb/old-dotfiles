@@ -12,6 +12,10 @@ bind r source-file ~/.tmux.conf
 #Status Bar Settings|
 #-------------------
 set-option -g status-position top
+set -g status-justify left
+set -g status-bg default
+set -g status-fg default
+set -g status-interval 2
 
 #--------------------------------------------------
 # start window numbering at 1 for easier switching|
@@ -28,18 +32,13 @@ set -g pane-active-border-fg colour238
 # toggle statusbar
 bind-key b set-option status
 
-# status line
-set -g status-justify left
-set -g status-bg default
-set -g status-fg default
-set -g status-interval 2
 
 # messaging
 set -g message-fg black
 set -g message-bg yellow
 set -g message-command-fg blue
 set -g message-command-bg black
-set -g automatic-rename on
+set -g automatic-rename off
 
 # window mode
 setw -g mode-bg colour6
@@ -49,7 +48,7 @@ setw -g mode-fg colour0
 #---------------------------
 #Prevent Renaming of windows|
 #----------------------------
-set-option -g allow-rename off
+#set-option -g allow-rename off
 #-------------------------------
 # set scrollback history to 1000|
 #-------------------------------

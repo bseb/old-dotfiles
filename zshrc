@@ -89,21 +89,36 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
 if [ -e ~/.workalias ];then
         source ~/.workalias
 fi
+# Tmux
 alias tmove="tmux detach && tmux attach"
 alias tma="tmux attach-session -t"
+#Vagrant
+vd() {
+    for VAGRANT_HOST in $@; do
+        cert_name=$(vagrant ssh puppet -c "sudo puppet cert list -all" 2> /dev/null|grep "${VAGRANT_HOST}-${USER}\.dev.*"|awk '{gsub("\"", "", $2);print $2}')
+        echo -n "Press ENTER to delete ${cert_name}..."
+        read
+        vagrant ssh puppet -c "sudo puppet cert clean ${cert_name}"
+        vagrant destroy -f ${VAGRANT_HOST}
+    done
+}
+alias vg="vagrant global-status"
+alias vh="vagrant halt $1"
+alias vr="vagrant ssh $1 -c 'sudo su -'"
+alias vs="vagrant status"
+alias vssh="vagrant ssh $1"
+alias vu="vagrant up $1"
+#General Shell stuff
 alias ll="ls -alht"
 alias wq="exit"
 alias :wq="exit"
 unset GREP_OPTIONS
 alias grep="grep --color=auto --exclude-dir=.cvs --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn"
 alias sshKeyUnlock="eval `ssh-agent -s` ; ssh-add"
-#remap capslock to ctrl
-#setxkbmap -option ctrl:nocaps
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
 #Term Settings
 export TERM=xterm-256color
-[ -n "$TMUX" ] && export TERM=screen-256color
 # The following to fix home,end,etc. This stolen from the zsh page on the Arch wiki
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
