@@ -184,5 +184,5 @@ bar {
 #exec ~/.fehbg &
 exec nitrogen --restore &
 #Start Network Manager Applet
-exec --no-startup-id nm-applet
-exec --no-startup-id yubioauth
+#exec --no-startup-id nm-applet
+#exec --no-startup-id yubioauth
