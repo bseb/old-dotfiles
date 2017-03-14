@@ -96,12 +96,3 @@ bind -n S-Right next-window
 bind . setw synchronize-panes \; display "Pane sync: #{?pane_synchronized,on,off}"
 setw -qg window-status-current-format " #W #{?pane_synchronized,<sync> ,}"
 
-#Powerline setup
-set-option -g status on
-set-option -g status-interval 2
-set-option -g status-justify "centre"
-set-option -g status-left-length 60
-set-option -g status-right-length 90
-set-option -g status-left "#(~/dotfiles/tmux-powerline/powerline.sh left)"
-set-option -g status-right "#(~/dotfiles/tmux-powerline/powerline.sh right)"
-
