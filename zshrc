@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira"
+ZSH_THEME="robbyrussell"
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -113,7 +113,6 @@ alias sshKeyUnlock="eval `ssh-agent -s` ; ssh-add"
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
 #Term Settings
-export TERM=xterm-256color
 # The following to fix home,end,etc. This stolen from the zsh page on the Arch wiki
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
