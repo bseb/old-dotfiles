@@ -13,9 +13,11 @@ bind r source-file ~/.tmux.conf
 #-------------------
 set-option -g status-position top
 set -g status-justify left
-set -g status-bg default
-set -g status-fg default
+set -g status-bg blue
+set -g status-fg white
 set -g status-interval 2
+set -g status-justify centre
+bind-key b set-option status
 
 #--------------------------------------------------
 # start window numbering at 1 for easier switching|
@@ -24,13 +26,9 @@ set -g base-index 1
 #--------
 # colors|
 #--------
-#set -g default-terminal "screen-256color"
 # panes
 set -g pane-border-fg colour0
 set -g pane-active-border-fg colour238
-
-# toggle statusbar
-bind-key b set-option status
 
 
 # messaging
@@ -45,10 +43,6 @@ setw -g mode-bg colour6
 setw -g mode-fg colour0
 
 
-#---------------------------
-#Prevent Renaming of windows|
-#----------------------------
-#set-option -g allow-rename off
 #-------------------------------
 # set scrollback history to 1000|
 #-------------------------------
@@ -92,7 +86,12 @@ bind -n M-Down select-pane -D
 bind -n S-Left previous-window
 bind -n S-Right next-window
 
-#Pane Sync Setup
+# Allow Mouse to resize
+set -g mouse on
+
+#----------------
+#Pane Sync Setup|
+#---------------
 bind . setw synchronize-panes \; display "Pane sync: #{?pane_synchronized,on,off}"
 setw -qg window-status-current-format " #W #{?pane_synchronized,<sync> ,}"
 

@@ -46,7 +46,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pip python virtualenvwrapper zsh-syntax-highlighting docker vagrant)
+plugins=(git pip python virtualenvwrapper zsh-syntax-highlighting docker vagrant geeknote )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,6 +113,8 @@ alias sshKeyUnlock="eval `ssh-agent -s` ; ssh-add"
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
 #Term Settings
+setxkbmap -option ctrl:nocaps
+
 # The following to fix home,end,etc. This stolen from the zsh page on the Arch wiki
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
