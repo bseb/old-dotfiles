@@ -86,8 +86,6 @@ bind -n M-Down select-pane -D
 bind -n S-Left previous-window
 bind -n S-Right next-window
 
-# Allow Mouse to resize
-set -g mouse on
 
 #----------------
 #Pane Sync Setup|
