@@ -15,6 +15,7 @@ set-option -g status-position top
 set -g status-justify left
 set -g status-bg blue
 set -g status-fg white
+setw -g window-status-current-attr bold
 set -g status-interval 2
 set -g status-justify centre
 bind-key b set-option status
