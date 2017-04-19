@@ -1,9 +1,3 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = git@github.com:bseb/oh-my-zsh.git
-[submodule "oh-my-zsh-powerline-theme"]
-	path = oh-my-zsh-powerline-theme
-	url = git@github.com:bseb/oh-my-zsh-powerline-theme.git
-[submodule "tmux-powerline"]
-	path = tmux-powerline
-	url = git@github.com:bseb/tmux-powerline.git
