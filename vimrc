@@ -23,11 +23,15 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'klen/python-mode'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'rodjek/vim-puppet'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
