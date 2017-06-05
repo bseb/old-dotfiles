@@ -2,9 +2,11 @@
 "General Look and Feel#
 "#####################
 set number
+set list!
+set listchars=tab:»·,trail:·
 "Highlighting
 set cursorline
-hi CursorLine term=bold ctermbg=233 cterm=bold guibg=Grey40
+hi CursorLine term=bold ctermbg=102 cterm=bold guibg=Grey40
 "Duh
 set tabstop=4
 "Because I forget sudo frequently
@@ -76,3 +78,4 @@ let g:airline_powerline_fonts = 1
 set statusline=%{fugitive#statusline()}
 "NerdTree
 map <F2> :NERDTreeToggle<CR>
+"
