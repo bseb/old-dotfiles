@@ -7,8 +7,6 @@ set listchars=tab:»·,trail:·
 "Highlighting
 set cursorline
 hi CursorLine term=bold ctermbg=102 cterm=bold guibg=Grey40
-"Duh
-set tabstop=4
 "Because I forget sudo frequently
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 "########

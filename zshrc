@@ -157,3 +157,9 @@ export LC_ALL=en_US.UTF-8
 #    zle -N zle-line-finish
 #fi
 ##End Keybindings fix
+
+
+
+
+
+
