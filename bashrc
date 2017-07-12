@@ -28,3 +28,5 @@ setxkbmap -option ctrl:nocaps
 
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
