@@ -21,3 +21,6 @@ ln -sf ~/dotfiles/vimrc ~/.vimrc
 ln -sf ~/dotfiles/vimrc ~/.vim/init.vim
 ln -sF ~/.vim ~/.config/nvim
 /usr/bin/git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+#Add tmux config
+ln -sf ~/dotfiles/tmux ~/.tmux.conf
