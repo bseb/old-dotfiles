@@ -21,7 +21,7 @@ ZSH_THEME="nebirhos"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="candy"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -40,7 +40,7 @@ COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ ZSH_CUSTOM=~/dotfiles/zsh_custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -55,8 +55,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -113,61 +111,5 @@ alias vim="nvim"
 alias sshKeyUnlock="eval `ssh-agent -s` ; ssh-add"
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
-#Term Settings
-
-# The following to fix home,end,etc. This stolen from the zsh page on the Arch wiki
-# create a zkbd compatible hash;
-# to add other keys to this hash, see: man 5 terminfo
-#typeset -A key
-#
-#key[Home]=${terminfo[khome]}
-#
-#key[End]=${terminfo[kend]}
-#key[Insert]=${terminfo[kich1]}
-#key[Delete]=${terminfo[kdch1]}
-#key[Up]=${terminfo[kcuu1]}
-#key[Down]=${terminfo[kcud1]}
-#key[Left]=${terminfo[kcub1]}
-#key[Right]=${terminfo[kcuf1]}
-#key[PageUp]=${terminfo[kpp]}
-#key[PageDown]=${terminfo[knp]}
-#
-## setup key accordingly
-#[[ -n "${key[Home]}"     ]]  && bindkey  "${key[Home]}"     beginning-of-line
-#[[ -n "${key[End]}"      ]]  && bindkey  "${key[End]}"      end-of-line
-#[[ -n "${key[Insert]}"   ]]  && bindkey  "${key[Insert]}"   overwrite-mode
-#[[ -n "${key[Delete]}"   ]]  && bindkey  "${key[Delete]}"   delete-char
-#[[ -n "${key[Up]}"       ]]  && bindkey  "${key[Up]}"       up-line-or-history
-#[[ -n "${key[Down]}"     ]]  && bindkey  "${key[Down]}"     down-line-or-history
-#[[ -n "${key[Left]}"     ]]  && bindkey  "${key[Left]}"     backward-char
-#[[ -n "${key[Right]}"    ]]  && bindkey  "${key[Right]}"    forward-char
-#[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"   beginning-of-buffer-or-history
-#[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}" end-of-buffer-or-history
-#
-## Finally, make sure the terminal is in application mode, when zle is
-## active. Only then are the values from $terminfo valid.
-#if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
-#    function zle-line-init () {
-#        printf '%s' "${terminfo[smkx]}"
-#    }
-#    function zle-line-finish () {
-#        printf '%s' "${terminfo[rmkx]}"
-#    }
-#    zle -N zle-line-init
-#    zle -N zle-line-finish
-#fi
-##End Keybindings fix
-
-
-
-
-
-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/bsebastian/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/bsebastian/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/bsebastian/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/bsebastian/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
+#Add fuzzy finder support
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
