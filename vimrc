@@ -6,7 +6,7 @@ set list!
 set listchars=tab:»·,trail:·
 "Highlighting
 set cursorline
-hi CursorLine term=bold ctermbg=102 cterm=bold guibg=Grey40
+hi CursorLine term=bold cterm=bold 
 "Because I forget sudo frequently
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 "########
@@ -32,6 +32,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'mklabs/split-term.vim'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
@@ -76,4 +77,8 @@ let g:airline_powerline_fonts = 1
 set statusline=%{fugitive#statusline()}
 "NerdTree
 map <F2> :NERDTreeToggle<CR>
+"
+"split-term
+set splitbelow
+map <F3> :Term20<CR>
 "
