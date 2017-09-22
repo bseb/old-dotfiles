@@ -3,7 +3,7 @@
 "#####################
 set number
 set list!
-set listchars=tab:»·,trail:·
+set listchars=tab:»·,trail:·,eol:¬
 "Highlighting
 set cursorline
 hi CursorLine term=bold cterm=bold 
@@ -30,9 +30,9 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'rodjek/vim-puppet'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'chase/vim-ansible-yaml'
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mklabs/split-term.vim'
+Plugin 'ntpeters/vim-better-whitespace'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
@@ -55,7 +55,7 @@ nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>x :bd<CR>
 nnoremap <Leader>f :bn<CR>
 nnoremap <Leader>g :e#<CR>
-nnoremap <Leader>1 :1b<CR>
+
 nnoremap <Leader>2 :2b<CR>
 nnoremap <Leader>3 :3b<CR>
 nnoremap <Leader>4 :4b<CR>
