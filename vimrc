@@ -4,9 +4,12 @@
 set number
 set list!
 set listchars=tab:»·,trail:·,eol:¬
+"Folding is bad and it should feel bad, and also be disabled
+set nofoldenable
+
 "Highlighting
 set cursorline
-hi CursorLine term=bold cterm=bold 
+hi CursorLine term=bold cterm=bold
 "Because I forget sudo frequently
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 "########
@@ -33,6 +36,8 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mklabs/split-term.vim'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'xolox/vim-session'
+Plugin 'xolox/vim-misc'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
@@ -82,3 +87,15 @@ map <F2> :NERDTreeToggle<CR>
 set splitbelow
 map <F3> :Term20<CR>
 "
+"Relative Numbering
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set nornu
+    set number
+  else
+    set rnu
+  endif
+endfunc
+
+" Toggle between normal and relative numbering.
+nnoremap <leader>r :call NumberToggle()<cr>
