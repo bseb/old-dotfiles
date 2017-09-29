@@ -25,9 +25,8 @@ call vundle#begin()
 Plugin 'tpope/vim-fugitive'
 Plugin 'klen/python-mode'
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'w0rp/ale'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'rodjek/vim-puppet'
@@ -97,5 +96,9 @@ function! NumberToggle()
   endif
 endfunc
 
+"ale
+let g:airline#extensions#ale#enabled = 1
+
 " Toggle between normal and relative numbering.
 nnoremap <leader>r :call NumberToggle()<cr>
+
