@@ -2,13 +2,13 @@
 source ~/dotfiles/antigen.zsh
 #Load OMZsh
 antigen use oh-my-zsh
+antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
 # OMZsh plugins
 antigen bundle git
 antigen bundle osx
 antigen bundle docker
 antigen bundle vagrant
-# Antigen theme
-antigen theme candy
+antigen bundle vagrant
 # Other Plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
