@@ -1,4 +1,5 @@
 #Load Antigen
+ANTIGEN_CACHE=false
 source ~/dotfiles/antigen.zsh
 #Load OMZsh
 antigen use oh-my-zsh
@@ -8,9 +9,9 @@ antigen bundle git
 antigen bundle osx
 antigen bundle docker
 antigen bundle vagrant
-antigen bundle vagrant
 # Other Plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle bseb/dockerMachineZsh
 antigen apply
 # aliases and functions
 # Use work aliases if on my work machine
