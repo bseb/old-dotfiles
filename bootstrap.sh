@@ -9,10 +9,7 @@ if [[ $( uname ) == 'Darwin' ]]; then
   ln -sf ~/dotfiles/Brewfile ~/Brewfile
 fi
 
-#Shell Setup. oh-my-zsh is a submodule of this repository
-git submodule init ~/dotfiles
-git submodule update ~/dotfiles
-ln -sf ~/dotfiles/oh-my-zsh ~/.oh-my-zsh
+#Shell Setup.
 ln -sf ~/dotfiles/zshrc ~/.zshrc
 
 #Setup for vim and neovim
