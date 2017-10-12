@@ -12,8 +12,13 @@ antigen bundle vagrant
 # Other Plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle bseb/dockerMachineZsh
+# Apply Antigen config
 antigen apply
 # aliases and functions
+# Spaceship stuff
+if [[ -z $KUBECONTEXT ]];then
+    SPACESHIP_KUBECONTEXT_SHOW=false
+fi
 # Use work aliases if on my work machine
 if [ -e ~/.workalias ];then
         source ~/.workalias
