@@ -106,4 +106,4 @@ let g:airline#extensions#ale#enabled = 1
 nnoremap <leader>r :call NumberToggle()<cr>
 
 " Bindings for fzf.vim
-nmap <Leader>r :FZF<CR>
+nmap <Leader>; :FZF<CR>
