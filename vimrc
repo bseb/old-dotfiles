@@ -23,6 +23,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "Plugins Managed by Vundle
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround.git'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'w0rp/ale'
@@ -36,6 +37,9 @@ Plugin 'mklabs/split-term.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
+Plugin 'junegunn/fzf'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mitsuhiko/vim-python-combined'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
@@ -101,3 +105,5 @@ let g:airline#extensions#ale#enabled = 1
 " Toggle between normal and relative numbering.
 nnoremap <leader>r :call NumberToggle()<cr>
 
+" Bindings for fzf.vim
+nmap <Leader>r :FZF<CR>
