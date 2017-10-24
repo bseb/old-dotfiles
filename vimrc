@@ -33,7 +33,6 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'mklabs/split-term.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
@@ -85,10 +84,6 @@ set statusline=%{fugitive#statusline()}
 "NerdTree
 map <F2> :NERDTreeToggle<CR>
 "
-"split-term
-set splitbelow
-map <F3> :Term20<CR>
-"
 "Relative Numbering
 function! NumberToggle()
   if(&relativenumber == 1)
@@ -98,12 +93,9 @@ function! NumberToggle()
     set rnu
   endif
 endfunc
-
-"ale
-let g:airline#extensions#ale#enabled = 1
-
 " Toggle between normal and relative numbering.
 nnoremap <leader>r :call NumberToggle()<cr>
-
+"ale
+let g:airline#extensions#ale#enabled = 1
 " Bindings for fzf.vim
 nmap <Leader>; :FZF<CR>
