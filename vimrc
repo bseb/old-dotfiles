@@ -37,6 +37,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mitsuhiko/vim-python-combined'
 "End Vundle
@@ -56,7 +57,7 @@ let mapleader = "\<Space>"
 " l       : list buffers
 " b f g : go back/forward/last-used
 " 1 2 3 : go to buffer 1/2/3 etc
-nnoremap <Leader>l :ls<CR>
+nmap <Leader>l :Buffers<CR>
 nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>x :bd<CR>
 nnoremap <Leader>f :bn<CR>
