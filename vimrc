@@ -12,6 +12,8 @@ set cursorline
 hi CursorLine term=bold cterm=bold
 "Because I forget sudo frequently
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+"backspace should behave like backspace
+:set backspace=indent,eol,start
 "########
 "Plugins#
 "#######
@@ -82,6 +84,9 @@ let g:airline_section_gutter = '%= %{strftime("%R")}'
 let g:airline_powerline_fonts = 1
 "Fugitive
 set statusline=%{fugitive#statusline()}
+"Ansible
+au BufRead,BufNewFile */ansible/*.yml set filetype=ansible
+let g:ansible_unindent_after_newline = 1
 "NerdTree
 map <F2> :NERDTreeToggle<CR>
 "
