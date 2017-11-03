@@ -86,6 +86,7 @@ let g:airline_powerline_fonts = 1
 set statusline=%{fugitive#statusline()}
 "Ansible
 au BufRead,BufNewFile */ansible/*.yml set filetype=ansible
+au BufRead,BufNewFile */ansible/*.yaml set filetype=ansible
 let g:ansible_unindent_after_newline = 1
 "NerdTree
 map <F2> :NERDTreeToggle<CR>
@@ -103,5 +104,7 @@ endfunc
 nnoremap <leader>r :call NumberToggle()<cr>
 "ale
 let g:airline#extensions#ale#enabled = 1
+let g:ale_puppet_puppetlint_options = '--no-80chars-check --no-class_inherits_from_params_class-check --no-variable_scope-check --no-documentation-check --no-autoloader_layout-check'
+let g:ale_yaml_yamllint_options = '-d "{extends: relaxed, rules: {line-length: {max: 1200}}}"'
 " Bindings for fzf.vim
 nmap <Leader>; :FZF<CR>
