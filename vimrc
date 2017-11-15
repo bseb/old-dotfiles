@@ -6,6 +6,8 @@ set list!
 set listchars=tab:»·,trail:·,eol:¬
 "Folding is bad and it should feel bad, and also be disabled
 set nofoldenable
+"Fix Delay on Esc
+set timeoutlen=1000 ttimeoutlen=10
 
 "Highlighting
 set cursorline
