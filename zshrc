@@ -16,9 +16,7 @@ antigen bundle bseb/dockerMachineZsh
 antigen apply
 # aliases and functions
 # Spaceship stuff
-if [[ -z $KUBECONTEXT ]];then
-    SPACESHIP_KUBECONTEXT_SHOW=false
-fi
+SPACESHIP_KUBECONTEXT_SHOW=false
 # Use work aliases if on my work machine
 if [ -e ~/.workalias ];then
         source ~/.workalias
