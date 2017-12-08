@@ -44,6 +44,7 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mitsuhiko/vim-python-combined'
+Plugin 'fatih/vim-go'
 "End Vundle
 call vundle#end()
 filetype plugin indent on

@@ -40,6 +40,8 @@ alias vr="vagrant ssh $1 -c 'sudo su -'"
 alias vs="vagrant status"
 alias vssh="vagrant ssh $1"
 alias vu="vagrant up $1"
+#GOLANG Stuff
+export GOPATH=$HOME/workspace/go
 #General Shell stuff
 alias ll="ls -alht"
 alias wq="exit"
