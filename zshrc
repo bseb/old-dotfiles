@@ -5,7 +5,6 @@ source ~/dotfiles/antigen.zsh
 antigen use oh-my-zsh
 antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
 # OMZsh plugins
-antigen bundle git
 antigen bundle osx
 antigen bundle docker
 antigen bundle vagrant
