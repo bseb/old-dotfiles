@@ -18,12 +18,11 @@ brew "rbenv"
 brew "terraform"
 brew "lastpass-cli"
 brew "packer"
-brew "vim", args:["with-override-system-vim"] 
+brew "vim", args:["with-override-system-vim"]
 brew "vault"
 brew "pipenv"
 brew "coreutils"
 cask "font-hack"
-cask "minikube"
 cask "vagrant"
 cask "virtualbox"
 cask "iterm2"

@@ -1,3 +1,4 @@
+PATH=~/bin:~/.rbenv:$PATH
 #Load Antigen
 ANTIGEN_CACHE=false
 source ~/dotfiles/antigen.zsh
@@ -23,6 +24,7 @@ fi
 # Tmux
 alias tmove="tmux detach && tmux attach"
 alias tma="tmux attach-session -t"
+alias tnew="tmux new-session -d -s $1"
 #Vagrant
 vd() {
     for VAGRANT_HOST in $@; do
@@ -41,6 +43,8 @@ alias vssh="vagrant ssh $1"
 alias vu="vagrant up $1"
 #GOLANG Stuff
 export GOPATH=$HOME/workspace/go
+#Ruby Stuff
+eval "$(rbenv init -)"
 #General Shell stuff
 alias ll="ls -alht"
 alias wq="exit"
