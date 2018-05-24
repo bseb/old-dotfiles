@@ -22,3 +22,10 @@ ln -sF ~/.vim ~/.config/nvim
 
 #Add tmux config
 ln -sf ~/dotfiles/tmux ~/.tmux.conf
+
+# Git config
+
+ln -sf ~/dotfiles/gitignore_global ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+git config --global user.email "bsebastian0512@gmail.com"
+git config --global user.name "Ben Sebastian"
