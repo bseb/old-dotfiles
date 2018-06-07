@@ -6,6 +6,7 @@ if [[ $( uname ) == 'Darwin' ]]; then
     mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
   fi
   /usr/local/bin/brew tap Homebrew/bundle
+  /usr/local/bin/brew bundle --file=~/dotfiles/Brewfile
   ln -sf ~/dotfiles/Brewfile ~/Brewfile
 fi
 
