@@ -22,7 +22,9 @@ ln -sF ~/.vim ~/.config/nvim
 /usr/bin/git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 #Add tmux config
-ln -sf ~/dotfiles/tmux ~/.tmux.conf
+ln -sf ~/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/tmux-powerline/tmux-powerlinerc ~/.tmux-powerlinerc
+ln -sf ~/dotfiles/.tmux/.tmux.conf.local ~/dotfiles/.tmux/.tmux.conf.local
 
 # Git config
 
