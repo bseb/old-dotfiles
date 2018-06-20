@@ -24,7 +24,7 @@ ln -sF ~/.vim ~/.config/nvim
 #Add tmux config
 ln -sf ~/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/tmux-powerline/tmux-powerlinerc ~/.tmux-powerlinerc
-ln -sf ~/dotfiles/.tmux/.tmux.conf.local ~/dotfiles/.tmux/.tmux.conf.local
+ln -sf ~/dotfiles/.tmux/.tmux.conf.local ~/.tmux/.tmux.conf.local
 
 # Git config
 
