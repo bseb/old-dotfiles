@@ -8,6 +8,7 @@ set listchars=tab:»·,trail:·,eol:¬
 set nofoldenable
 "Fix Delay on Esc
 set timeoutlen=1000 ttimeoutlen=10
+set ts=4 sw=4
 
 "Highlighting
 set cursorline
@@ -34,6 +35,7 @@ Plugin 'w0rp/ale'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'rodjek/vim-puppet'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ntpeters/vim-better-whitespace'
