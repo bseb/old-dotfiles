@@ -3,7 +3,7 @@
 #Install Homebrew on Mac
 if [[ $( uname ) == 'Darwin' ]]; then
   if [[ ! -e /usr/local/bin/brew ]]; then
-    mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
   /usr/local/bin/brew tap Homebrew/bundle
   /usr/local/bin/brew bundle --file=~/dotfiles/Brewfile
@@ -24,7 +24,7 @@ ln -sF ~/.vim ~/.config/nvim
 #Add tmux config
 ln -sf ~/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/tmux-powerline/tmux-powerlinerc ~/.tmux-powerlinerc
-ln -sf ~/dotfiles/.tmux/.tmux.conf.local ~/.tmux/.tmux.conf.local
+ln -sf ~/dotfiles/.tmux/.tmux.conf.local ~/.tmux.conf.local
 
 # Git config
 
