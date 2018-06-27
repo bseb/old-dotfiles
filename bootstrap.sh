@@ -8,6 +8,7 @@ if [[ $( uname ) == 'Darwin' ]]; then
   /usr/local/bin/brew tap Homebrew/bundle
   /usr/local/bin/brew bundle --file=~/dotfiles/Brewfile
   ln -sf ~/dotfiles/Brewfile ~/Brewfile
+  ln -sf ~/Library/Mobile\ Documents/com\~apple\~CloudDocs ~/iCloud
 fi
 
 #Shell Setup.
