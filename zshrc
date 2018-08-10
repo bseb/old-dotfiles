@@ -44,8 +44,6 @@ alias vssh="vagrant ssh $1"
 alias vu="vagrant up $1"
 #GOLANG Stuff
 export GOPATH=$HOME/workspace/go
-#Ruby Stuff
-eval "$(rbenv init -)"
 #General Shell stuff
 alias ll="ls -alht"
 alias wq="exit"
@@ -60,8 +58,7 @@ export TERM=xterm-256color
 #Add fuzzy finder support
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ben/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ben/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+# Add asdf version control
+. $HOME/.asdf/asdf.sh
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ben/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ben/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+. $HOME/.asdf/completions/asdf.bash
