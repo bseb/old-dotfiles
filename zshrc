@@ -57,8 +57,9 @@ export LC_ALL=en_US.UTF-8
 export TERM=xterm-256color
 #Add fuzzy finder support
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Add asdf version control
+#ASDF stuff
 . $HOME/.asdf/asdf.sh
 
 . $HOME/.asdf/completions/asdf.bash
+# Use homebrew curl
+export PATH="/usr/local/opt/curl/bin:$PATH"
