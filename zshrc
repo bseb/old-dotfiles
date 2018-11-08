@@ -44,6 +44,10 @@ alias vssh="vagrant ssh $1"
 alias vu="vagrant up $1"
 #GOLANG Stuff
 export GOPATH=$HOME/workspace/go
+#Git Alias
+alias uncommit="reset --soft HEAD^"
+alias unstage="reset"
+alias staged="diff --cached"
 #General Shell stuff
 alias ll="ls -alht"
 alias wq="exit"

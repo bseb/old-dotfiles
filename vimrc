@@ -32,6 +32,7 @@ Plugin 'tpope/vim-surround.git'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'w0rp/ale'
+Plugin 'ngmy/vim-rubocop'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'rodjek/vim-puppet'
 Plugin 'vim-ruby/vim-ruby'
@@ -46,6 +47,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mitsuhiko/vim-python-combined'
 Plugin 'fatih/vim-go'
+Plugin 'martinda/Jenkinsfile-vim-syntax'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
