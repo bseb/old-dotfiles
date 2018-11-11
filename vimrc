@@ -1,5 +1,5 @@
 "#######################
-"General Look and Feel#
+
 "#####################
 set number
 set list!
@@ -8,7 +8,6 @@ set listchars=tab:»·,trail:·,eol:¬
 set nofoldenable
 "Fix Delay on Esc
 set timeoutlen=1000 ttimeoutlen=10
-set ts=4 sw=4
 
 "Highlighting
 set cursorline
@@ -48,6 +47,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'mitsuhiko/vim-python-combined'
 Plugin 'fatih/vim-go'
 Plugin 'martinda/Jenkinsfile-vim-syntax'
+Plugin 'stephpy/vim-yaml'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
