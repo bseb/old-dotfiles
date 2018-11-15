@@ -48,6 +48,7 @@ Plugin 'mitsuhiko/vim-python-combined'
 Plugin 'fatih/vim-go'
 Plugin 'martinda/Jenkinsfile-vim-syntax'
 Plugin 'stephpy/vim-yaml'
+Plugin 'vimwiki/vimwiki'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
@@ -96,7 +97,11 @@ au BufRead,BufNewFile */ansible/*.yaml set filetype=ansible
 let g:ansible_unindent_after_newline = 1
 "NerdTree
 map <F2> :NERDTreeToggle<CR>
+" Vimwiki
+let g:vimwiki_list = [{'path': '~/iCloud/wiki/'}]
 "
+" fzf.vim
+nmap <Leader>; :FZF<CR>
 "Relative Numbering
 function! NumberToggle()
   if(&relativenumber == 1)

@@ -45,6 +45,9 @@ alias vu="vagrant up $1"
 #GOLANG Stuff
 export GOPATH=$HOME/workspace/go
 #Git Alias
+alias gps="git push"
+alias gpl="git pull"
+alias gco="git checkout"
 alias uncommit="reset --soft HEAD^"
 alias unstage="reset"
 alias staged="diff --cached"
