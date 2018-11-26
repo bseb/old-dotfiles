@@ -13,6 +13,7 @@ antigen bundle vagrant
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle bseb/dockerMachineZsh
 antigen bundle oldratlee/hacker-quotes
+antigen bundle kiurchv/asdf.plugin.zsh
 # Apply Antigen config
 antigen apply
 # aliases and functions
