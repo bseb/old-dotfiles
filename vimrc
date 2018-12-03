@@ -49,6 +49,7 @@ Plugin 'fatih/vim-go'
 Plugin 'martinda/Jenkinsfile-vim-syntax'
 Plugin 'stephpy/vim-yaml'
 Plugin 'vimwiki/vimwiki'
+Plugin 'rizzatti/dash.vim'
 "End Vundle
 call vundle#end()
 filetype plugin indent on
