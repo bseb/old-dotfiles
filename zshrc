@@ -1,4 +1,3 @@
-PATH=~/bin:~/.rbenv:$PATH
 #Load Antigen
 ANTIGEN_CACHE=false
 source ~/dotfiles/antigen.zsh
