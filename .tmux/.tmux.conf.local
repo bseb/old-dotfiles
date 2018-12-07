@@ -265,3 +265,6 @@ tmux_conf_copy_to_os_clipboard=false
 
 # move status line to top
 set -g status-position top
+#Panesync
+bind . setw synchronize-panes \; display "Pane sync: #{?pane_synchronized,on,off}"
+setw -qg window-status-current-format " #W #{?pane_synchronized,<sync> ,}"
