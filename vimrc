@@ -102,6 +102,7 @@ let g:vimwiki_list = [{'path': '~/iCloud/wiki/'}]
 "
 " fzf.vim
 nmap <Leader>; :FZF<CR>
+nmap <Leader>' :Rg<CR>
 "Relative Numbering
 function! NumberToggle()
   if(&relativenumber == 1)
