@@ -44,6 +44,7 @@ alias vssh="vagrant ssh $1"
 alias vu="vagrant up $1"
 #GOLANG Stuff
 export GOPATH=$HOME/workspace/go
+export PATH=$GOPATH/bin:$PATH
 #Git Alias
 alias gps="git push"
 alias gpl="git pull"
