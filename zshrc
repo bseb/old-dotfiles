@@ -3,7 +3,7 @@ ANTIGEN_CACHE=false
 source ~/dotfiles/antigen.zsh
 #Load OMZsh
 antigen use oh-my-zsh
-antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
+antigen theme 0i0/0i0.zsh-theme
 # OMZsh plugins
 antigen bundle osx
 antigen bundle docker
@@ -11,6 +11,7 @@ antigen bundle vagrant
 # Other Plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle bseb/dockerMachineZsh
+antigen bundle bseb/containerShellZsh
 antigen bundle oldratlee/hacker-quotes
 antigen bundle kiurchv/asdf.plugin.zsh
 # Apply Antigen config
