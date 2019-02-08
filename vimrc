@@ -1,21 +1,26 @@
 "#######################
-
+"
 "#####################
 set number
 set list!
 set listchars=tab:»·,trail:·,eol:¬
+
 "Folding is bad and it should feel bad, and also be disabled
 set nofoldenable
+
 "Fix Delay on Esc
 set timeoutlen=1000 ttimeoutlen=10
 
 "Highlighting
 set cursorline
 hi CursorLine term=bold cterm=bold
+
 "Because I forget sudo frequently
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
 "backspace should behave like backspace
 :set backspace=indent,eol,start
+
 "########
 "Plugins#
 "#######
@@ -25,6 +30,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 "Start Vundle
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 "Plugins Managed by Vundle
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround.git'
@@ -47,14 +53,16 @@ Plugin 'mitsuhiko/vim-python-combined'
 Plugin 'fatih/vim-go'
 Plugin 'martinda/Jenkinsfile-vim-syntax'
 Plugin 'stephpy/vim-yaml'
-Plugin 'vimwiki/vimwiki'
 Plugin 'rizzatti/dash.vim'
 Plugin 'elixir-editors/vim-elixir'
 "End Vundle
 call vundle#end()
-filetype plugin indent on
+
+filetype plugin on
 syntax on
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 let mapleader = "\<Space>"
+
 "###########
 "Navigation#
 "##########
@@ -85,6 +93,7 @@ nnoremap <Leader>0 :10b<CR>
 "#################
 "#Plugin Settings#
 "#################
+
 "Airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
@@ -96,14 +105,19 @@ set statusline=%{fugitive#statusline()}
 au BufRead,BufNewFile */ansible/*.yml set filetype=ansible
 au BufRead,BufNewFile */ansible/*.yaml set filetype=ansible
 let g:ansible_unindent_after_newline = 1
+
 "NerdTree
 map <F2> :NERDTreeToggle<CR>
-" Vimwiki
-let g:vimwiki_list = [{'path': '~/iCloud/wiki/'}]
 "
 " fzf.vim
-nmap <Leader>; :FZF<CR>
+let g:fzf_files_options =
+      \ '--preview-window top:60% ' .
+      \ '--preview "(bat --color "always" {} || cat {}) 2> /dev/null | head -'
+      \ . &lines . '"'
+
+nmap <Leader>; :Files<CR>
 nmap <Leader>' :Rg<CR>
+
 "Relative Numbering
 function! NumberToggle()
   if(&relativenumber == 1)
@@ -115,9 +129,7 @@ function! NumberToggle()
 endfunc
 " Toggle between normal and relative numbering.
 nnoremap <leader>r :call NumberToggle()<cr>
+
 "ale
-let g:airline#extensions#ale#enabled = 1
 let g:ale_puppet_puppetlint_options = '--no-80chars-check --no-class_inherits_from_params_class-check --no-variable_scope-check --no-documentation-check --no-autoloader_layout-check'
 let g:ale_yaml_yamllint_options = '-d "{extends: relaxed, rules: {line-length: {max: 1200}}}"'
-" Bindings for fzf.vim
-nmap <Leader>; :FZF<CR>

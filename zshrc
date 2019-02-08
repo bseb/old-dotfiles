@@ -13,12 +13,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle bseb/dockerMachineZsh
 antigen bundle bseb/containerShellZsh
 antigen bundle oldratlee/hacker-quotes
-antigen bundle kiurchv/asdf.plugin.zsh
 # Apply Antigen config
 antigen apply
 # aliases and functions
-# Spaceship stuff
-SPACESHIP_KUBECONTEXT_SHOW=false
 # Use work aliases if on my work machine
 if [ -e ~/.workalias ];then
         source ~/.workalias
@@ -59,16 +56,14 @@ alias wq="exit"
 alias :wq="exit"
 unset GREP_OPTIONS
 alias grep="grep --color=auto --exclude-dir=.cvs --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn"
-alias vim="/usr/local/bin/vim"
+if [ -f "/usr/local/bin/vim" ]; then
+   alias vim="/usr/local/bin/vim"
+fi
 alias sshKeyUnlock="eval `ssh-agent -s` ; ssh-add"
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
 export TERM=xterm-256color
 #Add fuzzy finder support
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#ASDF stuff
-. $HOME/.asdf/asdf.sh
-
-. $HOME/.asdf/completions/asdf.bash
 # Use homebrew curl
 export PATH="/usr/local/opt/curl/bin:$PATH"
