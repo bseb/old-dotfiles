@@ -44,6 +44,10 @@ alias vu="vagrant up $1"
 export GOPATH=$HOME/workspace/go
 export PATH=$GOPATH/bin:$PATH
 #Git Alias
+if [ $(uname) == 'Darwin' ]
+then
+    eval $( hub alias -s)
+fi
 alias gps="git push"
 alias gpl="git pull"
 alias gco="git checkout"
