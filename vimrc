@@ -104,6 +104,7 @@ set statusline=%{fugitive#statusline()}
 "Ansible
 au BufRead,BufNewFile */ansible/*.yml set filetype=ansible
 au BufRead,BufNewFile */ansible/*.yaml set filetype=ansible
+au BufRead,BufNewFile */NotePlan/*.txt set filetype=markdown
 let g:ansible_unindent_after_newline = 1
 
 "NerdTree
