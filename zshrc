@@ -47,6 +47,7 @@ export PATH=$GOPATH/bin:$PATH
 if [ $(uname) == 'Darwin' ]
 then
     eval $( hub alias -s)
+    alias gpr="hub pull-request"
 fi
 alias gps="git push"
 alias gpl="git pull"
