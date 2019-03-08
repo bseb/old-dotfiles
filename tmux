@@ -94,3 +94,8 @@ bind -n S-Right next-window
 bind . setw synchronize-panes \; display "Pane sync: #{?pane_synchronized,on,off}"
 setw -qg window-status-current-format " #W #{?pane_synchronized,<sync> ,}"
 
+#----------
+#Tmux Line |
+#----------
+
+if-shell "test -f ~/dotfiles/tmuxline" "source ~/dotfiles/tmuxline"
