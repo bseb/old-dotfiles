@@ -31,3 +31,4 @@ ln -sf ~/dotfiles/gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 git config --global user.email "ben.sebastian@protonmail.com"
 git config --global user.name "Ben Sebastian"
+git config --global push.default current

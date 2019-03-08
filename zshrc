@@ -49,7 +49,7 @@ then
     eval $( hub alias -s)
     alias gpr="hub pull-request"
 fi
-alias gps="git push"
+alias gps="git push -u"
 alias gpl="git pull"
 alias gco="git checkout"
 alias uncommit="reset --soft HEAD^"
