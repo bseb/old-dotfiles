@@ -44,17 +44,19 @@ alias vu="vagrant up $1"
 export GOPATH=$HOME/workspace/go
 export PATH=$GOPATH/bin:$PATH
 #Git Alias
-if [ $(uname)=='Darwin' ]
-then
-    eval $( hub alias -s)
-    alias gpr="hub pull-request"
-fi
 alias gps="git push -u"
 alias gpl="git pull"
 alias gco="git checkout"
 alias uncommit="reset --soft HEAD^"
 alias unstage="reset"
 alias staged="diff --cached"
+if [[ -a $(which hub) ]]
+then
+    eval $( hub alias -s)
+    alias gpr="hub pull-request"
+    alias gpl="hub sync"
+    alias gci="hub ci-status"
+fi
 #General Shell stuff
 alias ll="ls -alht"
 alias wq="exit"
