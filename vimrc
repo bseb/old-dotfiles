@@ -56,6 +56,8 @@ Plugin 'martinda/Jenkinsfile-vim-syntax'
 Plugin 'stephpy/vim-yaml'
 Plugin 'rizzatti/dash.vim'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
 "End Vundle
 call vundle#end()
 
@@ -105,7 +107,7 @@ set statusline=%{fugitive#statusline()}
 "Ansible
 au BufRead,BufNewFile */ansible/*.yml set filetype=ansible
 au BufRead,BufNewFile */ansible/*.yaml set filetype=ansible
-au BufRead,BufNewFile */NotePlan/*.txt set filetype=markdown
+au BufRead,BufNewFile */*NotePlan*/*.txt set filetype=markdown
 let g:ansible_unindent_after_newline = 1
 
 "NerdTree
@@ -119,6 +121,14 @@ let g:fzf_files_options =
 
 nmap <Leader>; :Files<CR>
 nmap <Leader>' :Rg<CR>
+"Goyo and Limelight
+function! Focus()
+    Goyo
+    Limelight!!
+endfunc
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+map <F3> :call Focus()<CR>
 
 "Relative Numbering
 function! NumberToggle()
@@ -135,3 +145,5 @@ nnoremap <leader>r :call NumberToggle()<cr>
 "ale
 let g:ale_puppet_puppetlint_options = '--no-80chars-check --no-class_inherits_from_params_class-check --no-variable_scope-check --no-documentation-check --no-autoloader_layout-check'
 let g:ale_yaml_yamllint_options = '-d "{extends: relaxed, rules: {line-length: {max: 1200}}}"'
+au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.mdwn,*.md  set ft=markdown
+
