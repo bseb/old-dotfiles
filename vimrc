@@ -123,11 +123,11 @@ nmap <Leader>; :Files<CR>
 nmap <Leader>' :Rg<CR>
 "Goyo and Limelight
 function! Focus()
+    let g:limelight_conceal_ctermfg = 'gray'
+    let g:limelight_conceal_ctermfg = 240
     Goyo
     Limelight!!
 endfunc
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
 map <F3> :call Focus()<CR>
 
 "Relative Numbering
