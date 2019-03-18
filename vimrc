@@ -3,7 +3,7 @@
 "#####################
 set number
 set list!
-set listchars=tab:»·,trail:·,eol:¬
+set listchars=tab:»·,trail:·
 
 "Folding is bad and it should feel bad, and also be disabled
 set nofoldenable
