@@ -12,7 +12,6 @@ antigen bundle vagrant
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle bseb/dockerMachineZsh
 antigen bundle bseb/containerShellZsh
-antigen bundle oldratlee/hacker-quotes
 # Apply Antigen config
 antigen apply
 # aliases and functions
