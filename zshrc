@@ -65,6 +65,7 @@ alias grep="grep --color=auto --exclude-dir=.cvs --exclude-dir=.git --exclude-di
 if [ -f "/usr/local/bin/vim" ]; then
    alias vim="/usr/local/bin/vim"
 fi
+export EDITOR=vim
 alias sshKeyUnlock="eval `ssh-agent -s` ; ssh-add"
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
