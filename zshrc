@@ -62,10 +62,14 @@ alias wq="exit"
 alias :wq="exit"
 unset GREP_OPTIONS
 alias grep="grep --color=auto --exclude-dir=.cvs --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn"
-if [ -f "/usr/local/bin/vim" ]; then
+#Vim selection
+if [[ -a $(which nvim) ]]; then
+    alias vim="nvim"
+    export EDITOR=nvim
+elif [ -f "/usr/local/bin/vim" ]; then
    alias vim="/usr/local/bin/vim"
+   export EDITOR=vim
 fi
-export EDITOR=vim
 alias sshKeyUnlock="eval `ssh-agent -s` ; ssh-add"
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
