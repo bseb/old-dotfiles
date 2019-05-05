@@ -3,7 +3,7 @@ ANTIGEN_CACHE=false
 source ~/dotfiles/antigen.zsh
 #Load OMZsh
 antigen use oh-my-zsh
-antigen theme 0i0/0i0.zsh-theme
+antigen theme refined
 # OMZsh plugins
 antigen bundle osx
 antigen bundle docker
