@@ -15,7 +15,7 @@ set-option -g status-position top
 set -g status-justify left
 set -g status-bg blue
 set -g status-fg white
-setw -g window-status-current-attr bold
+setw -g window-status-current-style bold
 set -g status-interval 2
 set -g status-justify centre
 bind-key b set-option status
@@ -28,20 +28,17 @@ set -g base-index 1
 # colors|
 #--------
 # panes
-set -g pane-border-fg colour0
-set -g pane-active-border-fg colour238
+set -g pane-border-style fg=colour0
+set -g pane-active-border-style fg=colour239
 
 
 # messaging
-set -g message-fg black
-set -g message-bg yellow
-set -g message-command-fg blue
-set -g message-command-bg black
+set -g message-style fg=black,bg=yellow
+set -g message-command-style fg=blue,bg=black
 set -g automatic-rename off
 
 # window mode
-setw -g mode-bg colour6
-setw -g mode-fg colour0
+setw -g mode-style bg=colour6,fg=colour0
 
 
 #-------------------------------
