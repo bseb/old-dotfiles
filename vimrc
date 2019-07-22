@@ -50,7 +50,6 @@ Plugin 'xolox/vim-misc'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'mitsuhiko/vim-python-combined'
 Plugin 'fatih/vim-go'
 Plugin 'martinda/Jenkinsfile-vim-syntax'
 Plugin 'stephpy/vim-yaml'
@@ -143,7 +142,11 @@ endfunc
 nnoremap <leader>r :call NumberToggle()<cr>
 
 "ale
+let g:ale_linters = {
+\ 'python': ['pylint'],
+\}
 let g:ale_puppet_puppetlint_options = '--no-80chars-check --no-class_inherits_from_params_class-check --no-variable_scope-check --no-documentation-check --no-autoloader_layout-check'
 let g:ale_yaml_yamllint_options = '-d "{extends: relaxed, rules: {line-length: {max: 1200}}}"'
+let g:ale_python_pylint_args="--ignore=E501"
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.mdwn,*.md  set ft=markdown
 
