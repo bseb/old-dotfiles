@@ -15,12 +15,15 @@ set timeoutlen=1000 ttimeoutlen=10
 set cursorline
 hi CursorLine term=bold cterm=bold
 hi CursorLineNR ctermbg=cyan
+
 "Because I forget sudo frequently
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 "backspace should behave like backspace
 :set backspace=indent,eol,start
 
+"remamp esc to jj
+imap jj <Esc>
 "########
 "Plugins#
 "#######

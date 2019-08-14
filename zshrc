@@ -77,4 +77,4 @@ export TERM=xterm-256color
 #Add fuzzy finder support
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Use homebrew curl
-export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/opt/curl/bin:$PATH"
