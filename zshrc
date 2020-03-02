@@ -78,3 +78,7 @@ export TERM=xterm-256color
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Use homebrew curl
 export PATH="/usr/local/bin:/usr/local/opt/curl/bin:$PATH"
+# Silly Weather Function
+weather() {
+    curl http://v2.wttr.in/$1
+}
