@@ -61,6 +61,7 @@ Plugin 'elixir-editors/vim-elixir'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'jamessan/vim-gnupg'
+Plugin 'vimwiki/vimwiki'
 "End Vundle
 call vundle#end()
 
