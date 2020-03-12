@@ -26,10 +26,6 @@ alias tnew="tmux new-session -d -s $1"
 #Vagrant
 vd() {
     for VAGRANT_HOST in $@; do
-        cert_name=$(vagrant ssh puppet -c "sudo puppet cert list -all" 2> /dev/null|grep "${VAGRANT_HOST}-${USER}\.dev.*"|awk '{gsub("\"", "", $2);print $2}')
-        echo -n "Press ENTER to delete ${cert_name}..."
-        read
-        vagrant ssh puppet -c "sudo puppet cert clean ${cert_name}"
         vagrant destroy -f ${VAGRANT_HOST}
     done
 }
