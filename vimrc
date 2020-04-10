@@ -62,6 +62,8 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'vimwiki/vimwiki'
+Plugin 'yorokobi/vim-splunk'
+
 "End Vundle
 call vundle#end()
 
