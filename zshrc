@@ -24,11 +24,7 @@ alias tmove="tmux detach && tmux attach"
 alias tma="tmux attach-session -t"
 alias tnew="tmux new-session -d -s $1"
 #Vagrant
-vd() {
-    for VAGRANT_HOST in $@; do
-        vagrant destroy -f ${VAGRANT_HOST}
-    done
-}
+alias vd="vagramt destroy"
 alias vg="vagrant global-status"
 alias vh="vagrant halt $1"
 alias vr="vagrant ssh $1 -c 'sudo su -'"
