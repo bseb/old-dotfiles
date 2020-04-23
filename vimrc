@@ -40,7 +40,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround.git'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'rodjek/vim-puppet'
 Plugin 'vim-ruby/vim-ruby'
@@ -62,6 +62,8 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'vimwiki/vimwiki'
+Plugin 'yorokobi/vim-splunk'
+
 "End Vundle
 call vundle#end()
 
