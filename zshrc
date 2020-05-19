@@ -74,3 +74,11 @@ export PATH="/usr/local/bin:/usr/local/opt/curl/bin:$PATH"
 weather() {
     curl http://v2.wttr.in/$1
 }
+
+# OpenSSL Aliases for stuff I forget all the time and have to look up
+s_client() {
+    openssl s_client -connect ${1}:443
+}
+view_cert() {
+    openssl x509 -in $1 -noout -text
+}
