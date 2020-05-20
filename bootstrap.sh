@@ -13,6 +13,9 @@ fi
 
 #Shell Setup.
 ln -sf ~/dotfiles/zshrc ~/.zshrc
+if [[ ! -e  ~/.fzf.zsh ]]; then
+     $(brew --prefix)/opt/fzf/install
+fi
 
 #Setup for vim and neovim
 mkdir -p ~/.vim/autoload
