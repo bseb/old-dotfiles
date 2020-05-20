@@ -1,0 +1,11 @@
+ohmyzsh/ohmyzsh
+ohmyzsh/ohmyzsh path:lib
+# Theme
+ohmyzsh/ohmyzsh path:themes/bira.zsh-theme
+# OMZsh plugins
+ohmyzsh/ohmyzsh path:plugins/osx
+ohmyzsh/ohmyzsh path:plugins/docker
+# Other Plugins
+zsh-users/zsh-syntax-highlighting
+bseb/dockerMachineZsh
+bseb/containerShellZsh

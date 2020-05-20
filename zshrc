@@ -1,19 +1,7 @@
-#Load Antigen
-ANTIGEN_CACHE=false
-source ~/dotfiles/antigen.zsh
-#Load OMZsh
-antigen use oh-my-zsh
-antigen theme bira
-# OMZsh plugins
-antigen bundle osx
-antigen bundle docker
-antigen bundle vagrant
-# Other Plugins
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle bseb/dockerMachineZsh
-antigen bundle bseb/containerShellZsh
-# Apply Antigen config
-antigen apply
+#Load Antibody
+source <(antibody init)
+export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh"
+antibody bundle < ~/dotfiles/zsh_plugins.txt
 # aliases and functions
 # Use work aliases if on my work machine
 if [ -e ~/.workalias ];then
