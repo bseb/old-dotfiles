@@ -1,3 +1,5 @@
+# Use homebrew stuff
+export PATH="/usr/local/bin:/usr/local/opt/curl/bin:$PATH"
 #Load Antibody
 source <(antibody init)
 export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh"
@@ -56,8 +58,6 @@ export LC_ALL=en_US.UTF-8
 export TERM=xterm-256color
 #Add fuzzy finder support
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# Use homebrew curl
-export PATH="/usr/local/bin:/usr/local/opt/curl/bin:$PATH"
 # Silly Weather Function
 weather() {
     curl http://v2.wttr.in/$1
