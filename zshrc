@@ -52,7 +52,12 @@ elif [ -f "/usr/local/bin/vim" ]; then
    alias vim="/usr/local/bin/vim"
    export EDITOR=vim
 fi
-alias sshKeyUnlock="eval `ssh-agent -s` ; ssh-add"
+if [ `uname` = "Darwin" ]; then
+    alias sshKeyUnlock="eval `ssh-agent -s` ; ssh-add -K"
+else
+    alias  sshKeyUnlock="eval `ssh-agent -s` ; ssh-add"
+fi
+
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
 export TERM=xterm-256color
