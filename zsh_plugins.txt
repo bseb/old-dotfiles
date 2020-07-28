@@ -1,7 +1,7 @@
 ohmyzsh/ohmyzsh
 ohmyzsh/ohmyzsh path:lib
 # Theme
-ohmyzsh/ohmyzsh path:themes/bira.zsh-theme
+romkatv/powerlevel10k
 # OMZsh plugins
 ohmyzsh/ohmyzsh path:plugins/osx
 ohmyzsh/ohmyzsh path:plugins/docker

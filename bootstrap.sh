@@ -16,6 +16,7 @@ ln -sf ~/dotfiles/zshrc ~/.zshrc
 if [[ ! -e  ~/.fzf.zsh ]]; then
      $(brew --prefix)/opt/fzf/install
 fi
+ln -s ~/dotfiles/p10k.zsh ~/.p10k.zsh
 
 #Setup for vim and neovim
 mkdir -p ~/.vim/autoload
