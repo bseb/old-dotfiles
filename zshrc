@@ -75,6 +75,13 @@ weather() {
     curl http://v2.wttr.in/$1
 }
 
+# Set BUNNYPATH for Bash Bunny updates
+
+EXPECTED_LOCATION=/Volumes/BashBunny
+if [[ -d $EXPECTED_LOCATION ]]; then
+    export BUNNYPATH=$EXPECTED_LOCATION
+fi
+
 # OpenSSL Aliases for stuff I forget all the time and have to look up
 s_client() {
     openssl s_client -connect ${1}:443
