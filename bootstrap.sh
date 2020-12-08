@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Install Homebrew on Mac
+#MacOS Specific
 if [[ $( uname ) == 'Darwin' ]]; then
   if [[ ! -e /usr/local/bin/brew ]]; then
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -9,13 +9,16 @@ if [[ $( uname ) == 'Darwin' ]]; then
   /usr/local/bin/brew bundle --file=~/dotfiles/Brewfile
   ln -sf ~/dotfiles/Brewfile ~/Brewfile
   ln -sf ~/Library/Mobile\ Documents/com\~apple\~CloudDocs ~/iCloud
+  if [[ ! -e  ~/.fzf.zsh ]]; then
+     $(brew --prefix)/opt/fzf/install
+  fi
 fi
 
 #Shell Setup.
-ln -sf ~/dotfiles/zshrc ~/.zshrc
-if [[ ! -e  ~/.fzf.zsh ]]; then
-     $(brew --prefix)/opt/fzf/install
+if [[ ! -e /usr/local/bin/antibody ]]; then
+echo -e "Antibody needs installed https://getantibody.github.io/install/"
 fi
+ln -sf ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/p10k.zsh ~/.p10k.zsh
 
 #Setup for vim and neovim
@@ -25,6 +28,7 @@ ln -sf ~/dotfiles/vimrc ~/.vimrc
 ln -sf ~/dotfiles/vimrc ~/.vim/init.vim
 ln -sF ~/.vim ~/.config/nvim
 /usr/bin/git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim -c PluginInstall -c :q! -c:q!
 
 #Add tmux config
 ln -sf ~/dotfiles/tmux ~/.tmux.conf
