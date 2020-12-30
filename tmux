@@ -85,7 +85,7 @@ bind -n S-Left previous-window
 bind -n S-Right next-window
 
 # Mouse mode
-set -g mouse on
+set -g mouse off
 
 #----------------
 #Pane Sync Setup|
