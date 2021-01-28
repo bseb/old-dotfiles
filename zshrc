@@ -35,7 +35,6 @@ export PATH=$GOPATH/bin:$PATH
 alias gps="git push -u"
 alias gpl="git pull"
 alias gco="git checkout"
-alias cdt="cd $(git rev-parse --show-toplevel)"
 alias uncommit="reset --soft HEAD^"
 alias unstage="reset"
 alias staged="diff --cached"
@@ -46,6 +45,9 @@ then
     alias gpl="hub sync"
     alias gci="hub ci-status"
 fi
+cdt() {
+    cd `git rev-parse --show-toplevel`
+}
 #General Shell stuff
 alias ll="ls -alht"
 alias wq="exit"
