@@ -14,7 +14,9 @@ antigen theme romkatv/powerlevel10k
 #Antigen Plugins
 antigen use oh-my-zsh
 antigen bundle docker
-
+antigen zsh-users/zsh-syntax-highlighting
+antigen bundle MichaelAquilina/zsh-autoswitch-virtualenv
+# Apply Antigen Config
 antigen apply
 
 # aliases and functions
