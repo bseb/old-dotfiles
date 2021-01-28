@@ -7,10 +7,16 @@ fi
 
 # Use homebrew stuff
 export PATH="/usr/local/bin:/usr/local/opt/curl/bin:$PATH"
-#Load Antibody
-source <(antibody init)
-export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh"
-antibody bundle < ~/dotfiles/zsh_plugins.txt
+#Load Antigen
+source ~/antigen.zsh
+#Antigen Theme
+antigen theme romkatv/powerlevel10k
+#Antigen Plugins
+antigen use oh-my-zsh
+antigen bundle docker
+
+antigen apply
+
 # aliases and functions
 # Use work aliases if on my work machine
 if [ -e ~/.workalias ];then
