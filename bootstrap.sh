@@ -15,8 +15,8 @@ if [[ $( uname ) == 'Darwin' ]]; then
 fi
 
 #Shell Setup.
-if [[ ! -e /usr/local/bin/antibody ]]; then
-echo -e "Antibody needs installed https://getantibody.github.io/install/"
+if [[ ! -e ~/anitgen.zsh ]]; then
+    curl -L git.io/antigen > ~/antigen.zsh
 fi
 ln -sf ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/p10k.zsh ~/.p10k.zsh
