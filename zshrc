@@ -107,3 +107,26 @@ view_cert() {
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#Axiom config
+
+if [ -e ~/.axiom]; then
+    export PATH="$PATH:$HOME/.axiom/interact"
+    source /home/ben/.axiom/functions/autocomplete.zsh
+    compdef _axiom-ssh axiom-rm
+    compdef _axiom-ssh axiom-ssh
+    compdef _axiom-ssh axiom-select
+    compdef _axiom-ssh axiom-backup
+    compdef _axiom-ssh axiom-vpn
+    compdef _axiom-restore axiom-restore
+    compdef _axiom-deploy axiom-deploy
+    export PATH="$PATH:$HOME/.axiom/interact"
+    source /home/ben/.axiom/functions/autocomplete.zsh
+    compdef _axiom-ssh axiom-rm
+    compdef _axiom-ssh axiom-ssh
+    compdef _axiom-ssh axiom-select
+    compdef _axiom-ssh axiom-backup
+    compdef _axiom-ssh axiom-vpn
+    compdef _axiom-restore axiom-restore
+    compdef _axiom-deploy axiom-deploy
+fi
