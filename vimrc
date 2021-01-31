@@ -43,23 +43,15 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'dense-analysis/ale'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'rodjek/vim-puppet'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'xolox/vim-session'
-Plugin 'xolox/vim-misc'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'fatih/vim-go'
 Plugin 'martinda/Jenkinsfile-vim-syntax'
 Plugin 'stephpy/vim-yaml'
-Plugin 'rizzatti/dash.vim'
-Plugin 'elixir-editors/vim-elixir'
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'vimwiki/vimwiki'
 Plugin 'yorokobi/vim-splunk'
@@ -113,7 +105,6 @@ set statusline=%{fugitive#statusline()}
 "Ansible
 au BufRead,BufNewFile */ansible/*.yml set filetype=ansible
 au BufRead,BufNewFile */ansible/*.yaml set filetype=ansible
-au BufRead,BufNewFile */*NotePlan*/*.txt set filetype=markdown
 let g:ansible_unindent_after_newline = 1
 
 "NerdTree
@@ -127,14 +118,6 @@ let g:fzf_files_options =
 
 nmap <Leader>; :Files<CR>
 nmap <Leader>' :Rg<CR>
-"Goyo and Limelight
-function! Focus()
-    let g:limelight_conceal_ctermfg = 'gray'
-    let g:limelight_conceal_ctermfg = 240
-    Goyo
-    Limelight!!
-endfunc
-map <F3> :call Focus()<CR>
 
 "Relative Numbering
 function! NumberToggle()
