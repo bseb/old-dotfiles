@@ -110,7 +110,7 @@ view_cert() {
 
 #Axiom config
 
-if [ -e ~/.axiom]; then
+if [ -e ~/.axiom ]; then
     export PATH="$PATH:$HOME/.axiom/interact"
     source /home/ben/.axiom/functions/autocomplete.zsh
     compdef _axiom-ssh axiom-rm
