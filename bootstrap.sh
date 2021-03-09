@@ -31,6 +31,7 @@ ln -sF ~/.vim ~/.config/nvim
 vim -c PluginInstall -c :q! -c:q!
 
 #Add tmux config
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -sf ~/dotfiles/tmux ~/.tmux.conf
 
 # Git config

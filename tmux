@@ -98,3 +98,13 @@ setw -qg window-status-current-format " #W #{?pane_synchronized,<sync> ,}"
 #----------
 
 if-shell "test -f ~/dotfiles/tmuxline" "source ~/dotfiles/tmuxline"
+
+#---------
+# Plugins |
+#---------
+set -g @plugin 'tmux-plugins/tpm'
+#-----------------
+# Install Plugins|
+# ---------------
+
+run '~/.tmux/plugins/tpm/tpm'
