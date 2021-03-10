@@ -103,6 +103,9 @@ if-shell "test -f ~/dotfiles/tmuxline" "source ~/dotfiles/tmuxline"
 # Plugins |
 #---------
 set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'schasse/tmux-jump'
+set -g @plugin 'tmux-plugins/tmux-yank'
+
 #-----------------
 # Install Plugins|
 # ---------------
