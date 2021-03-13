@@ -106,6 +106,9 @@ set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'schasse/tmux-jump'
 set -g @plugin 'tmux-plugins/tmux-yank'
 
+
+set -g @jump-key 's'
+
 #-----------------
 # Install Plugins|
 # ---------------
