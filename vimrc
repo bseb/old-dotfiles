@@ -35,11 +35,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 "Plugins Managed by Vundle
-Bundle 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround.git'
-Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ourigen/skyline.vim'
 Plugin 'dense-analysis/ale'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'rodjek/vim-puppet'

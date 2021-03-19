@@ -11,13 +11,14 @@ bind r source-file ~/.tmux.conf
 #--------------------
 #Status Bar Settings|
 #-------------------
+set -g status-style fg=red,bg=black
 set-option -g status-position top
 set -g status-justify left
-set -g status-bg blue
-set -g status-fg white
-setw -g window-status-current-style bold
+set-window-option -g window-status-current-style fg=green
 set -g status-interval 2
-set -g status-justify centre
+set -g status-justify left
+set-option -g status-right-length 140
+set -g status-right '#(hostname)|🌐:#(curl icanhazip.com)|🔋:#{battery_percentage}|%a %h-%d %H:%M '
 bind-key b set-option status
 
 #--------------------------------------------------
@@ -93,18 +94,13 @@ set -g mouse off
 bind . setw synchronize-panes \; display "Pane sync: #{?pane_synchronized,on,off}"
 setw -qg window-status-current-format " #W #{?pane_synchronized,<sync> ,}"
 
-#----------
-#Tmux Line |
-#----------
-
-if-shell "test -f ~/dotfiles/tmuxline" "source ~/dotfiles/tmuxline"
-
 #---------
 # Plugins |
 #---------
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'schasse/tmux-jump'
 set -g @plugin 'tmux-plugins/tmux-yank'
+set -g @plugin 'tmux-plugins/tmux-battery'
 
 #-----------------
 # Install Plugins|
