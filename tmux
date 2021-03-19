@@ -102,6 +102,9 @@ set -g @plugin 'schasse/tmux-jump'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-battery'
 
+
+set -g @jump-key 's'
+
 #-----------------
 # Install Plugins|
 # ---------------
