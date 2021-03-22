@@ -94,11 +94,8 @@ nnoremap <Leader>0 :10b<CR>
 "#Plugin Settings#
 "#################
 
-"Airline
-set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_section_gutter = '%= %{strftime("%R")}'
-let g:airline_powerline_fonts = 1
+"Skyline
+let g:skyline_gitbranch = 1
 "Fugitive
 set statusline=%{fugitive#statusline()}
 "Ansible
