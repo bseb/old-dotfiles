@@ -105,13 +105,11 @@ view_cert() {
     openssl x509 -in $1 -noout -text
 }
 # Copy and paste from terminal to clipboard
-clip() {
-    if [[ `uname` -eq 'Linux' ]]; then
-        xclip -i -selection clipboard
-    elif [[ `uname` -eq 'Darwin' ]]; then
-        pbcopy
-    fi
-}
+if [[ `uname` == "Linux" ]]; then
+    alias clip="xclip -i -selection clipboard"
+elif [[ `uname` == "Darwin" ]]; then
+    alias clip="pbcopy"
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
