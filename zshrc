@@ -7,17 +7,14 @@ fi
 
 # Use homebrew stuff
 export PATH="/usr/local/bin:/usr/local/opt/curl/bin:$PATH"
-#Load Antigen
-source ~/antigen.zsh
-#Antigen Theme
-antigen theme romkatv/powerlevel10k
-#Antigen Plugins
-antigen use oh-my-zsh
-antigen bundle docker
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle MichaelAquilina/zsh-autoswitch-virtualenv
-# Apply Antigen Config
-antigen apply
+#Load Znap
+source ~/zsh-snap/znap.zsh
+#Znap Theme
+znap prompt romkatv/powerlevel10k
+#Znap Plugins
+znap source marlonrichert/zsh-autocomplete
+znap source MichaelAquilina/zsh-autoswitch-virtualenv
+znap source zsh-users/zsh-syntax-highlighting
 
 # aliases and functions
 # Use work aliases if on my work machine

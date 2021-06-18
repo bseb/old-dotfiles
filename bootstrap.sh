@@ -15,8 +15,8 @@ if [[ $( uname ) == 'Darwin' ]]; then
 fi
 
 #Shell Setup.
-if [[ ! -e ~/anitgen.zsh ]]; then
-    curl -L git.io/antigen > ~/antigen.zsh
+if [[ ! -e ~/zsh-snap/znap.zsh ]]; then
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git
 fi
 ln -sf ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/p10k.zsh ~/.p10k.zsh
