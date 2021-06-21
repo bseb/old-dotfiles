@@ -16,7 +16,7 @@ fi
 
 #Shell Setup.
 if [[ ! -e ~/zsh-snap/znap.zsh ]]; then
-    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/zsh-snap
 fi
 ln -sf ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/p10k.zsh ~/.p10k.zsh
