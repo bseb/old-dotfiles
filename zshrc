@@ -12,7 +12,6 @@ source ~/zsh-snap/znap.zsh
 #Znap Theme
 znap prompt romkatv/powerlevel10k
 #Znap Plugins
-znap source marlonrichert/zsh-autocomplete
 znap source MichaelAquilina/zsh-autoswitch-virtualenv
 znap source zsh-users/zsh-syntax-highlighting
 
@@ -59,10 +58,6 @@ alias wq="exit"
 alias :wq="exit"
 unset GREP_OPTIONS
 alias grep="grep --color=auto --exclude-dir=.cvs --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn"
-#Map caps to ctrl
-if [ `uname` = "Linux" ]; then
-    /usr/bin/setxkbmap -option "ctrl:nocaps"
-fi
 #Vim selection
 if [[ -a $(which nvim) ]]; then
     alias vim="nvim"
