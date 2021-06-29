@@ -54,6 +54,8 @@ Plugin 'stephpy/vim-yaml'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'vimwiki/vimwiki'
 Plugin 'yorokobi/vim-splunk'
+Plugin 'robertbasic/vim-hugo-helper'
+
 
 "End Vundle
 call vundle#end()
