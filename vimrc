@@ -39,22 +39,20 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ourigen/skyline.vim'
-Plugin 'dense-analysis/ale'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'rodjek/vim-puppet'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'fatih/vim-go'
 Plugin 'martinda/Jenkinsfile-vim-syntax'
 Plugin 'stephpy/vim-yaml'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'vimwiki/vimwiki'
 Plugin 'yorokobi/vim-splunk'
 Plugin 'robertbasic/vim-hugo-helper'
+Plugin 'neovim/nvim-lspconfig'
+Plugin 'kabouzeid/nvim-lspinstall'
 
 
 "End Vundle
@@ -129,14 +127,14 @@ endfunc
 " Toggle between normal and relative numbering.
 nnoremap <leader>r :call NumberToggle()<cr>
 
-"ale
-let g:ale_linters = {
-\ 'python': ['pylint'],
-\ 'go': ['golint'],
-\ 'ansible': ['ansible-lint'],
-\}
-let g:ale_puppet_puppetlint_options = '--no-80chars-check --no-class_inherits_from_params_class-check --no-variable_scope-check --no-documentation-check --no-autoloader_layout-check'
-let g:ale_yaml_yamllint_options = '-d "{extends: relaxed, rules: {line-length: {max: 1200}}}"'
-let g:ale_python_pylint_args="--ignore=E501"
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.mdwn,*.md  set ft=markdown
 
+" LSP Config
+lua << EOF
+require'lspinstall'.setup() -- important
+
+local servers = require'lspinstall'.installed_servers()
+for _, server in pairs(servers) do
+  require'lspconfig'[server].setup{}
+end
+EOF
