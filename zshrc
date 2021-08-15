@@ -16,9 +16,9 @@ znap source MichaelAquilina/zsh-autoswitch-virtualenv
 znap source zsh-users/zsh-syntax-highlighting
 
 # aliases and functions
-# Use work aliases if on my work machine
-if [ -e ~/.workalias ];then
-        source ~/.workalias
+# Use per machine aliases for things I dont want in git
+if [ -e ~/.localalias ];then
+        source ~/.localalias
 fi
 # Tmux
 alias tmove="tmux detach && tmux attach"
@@ -106,6 +106,11 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Case-insensitive autocomplete
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+setopt no_list_ambiguous
+
+#
 #Axiom config
 
 if [ -e ~/.axiom ]; then
