@@ -28,7 +28,6 @@ ln -sf ~/dotfiles/vimrc ~/.vimrc
 ln -sf ~/dotfiles/vimrc ~/.vim/init.vim
 ln -sF ~/.vim ~/.config/nvim
 /usr/bin/git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim -c PluginInstall -c :q! -c:q!
 
 #Add tmux config
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
