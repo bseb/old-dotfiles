@@ -23,6 +23,9 @@ export LANG="en_US.UTF-8"
 if [ -e ~/.localalias ];then
         source ~/.localalias
 fi
+# Share history between sessions
+setopt share_history
+
 # Tmux
 alias tmove="tmux detach && tmux attach"
 alias tma="tmux attach-session -t"
