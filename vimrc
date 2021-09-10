@@ -22,8 +22,9 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 "backspace should behave like backspace
 :set backspace=indent,eol,start
 
-"remamp esc to jj
+"remamp esc to jj and jk
 imap jj <Esc>
+imap jk <Esc>
 "########
 "Plugins#
 "#######
@@ -51,6 +52,7 @@ Plugin 'jamessan/vim-gnupg'
 Plugin 'robertbasic/vim-hugo-helper'
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'kabouzeid/nvim-lspinstall'
+Plugin 'nvim-lua/completion-nvim'
 
 
 "End Vundle
@@ -100,6 +102,16 @@ set statusline=%{fugitive#statusline()}
 au BufRead,BufNewFile */ansible/*.yml set filetype=ansible
 au BufRead,BufNewFile */ansible/*.yaml set filetype=ansible
 let g:ansible_unindent_after_newline = 1
+"Completion
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
 
 "NerdTree
 map <F2> :NERDTreeToggle<CR>
@@ -128,11 +140,20 @@ nnoremap <leader>r :call NumberToggle()<cr>
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.mdwn,*.md  set ft=markdown
 
 " LSP Config
-lua << EOF
-require'lspinstall'.setup() -- important
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gi    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gD    <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> ge    <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <leader>F    <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <silent> <leader>rn    <cmd>lua vim.lsp.buf.rename()<CR>
 
-local servers = require'lspinstall'.installed_servers()
-for _, server in pairs(servers) do
-  require'lspconfig'[server].setup{}
-end
-EOF
+nnoremap <silent> <leader>a <cmd>lua vim.lsp.buf.code_action()<CR>
+xmap <silent> <leader>a <cmd>lua vim.lsp.buf.range_code_action()<CR>
+
+sign define LspDiagnosticsSignError text=🔴
+sign define LspDiagnosticsSignWarning text=🟠
+sign define LspDiagnosticsSignInformation text=🔵
+sign define LspDiagnosticsSignHint text=🟢
+luafile ~/.vim/lsp_config.lua

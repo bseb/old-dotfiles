@@ -14,6 +14,9 @@ znap prompt romkatv/powerlevel10k
 #Znap Plugins
 znap source MichaelAquilina/zsh-autoswitch-virtualenv
 znap source zsh-users/zsh-syntax-highlighting
+znap source kiurchv/asdf.plugin.zsh
+
+export LANG="en_US.UTF-8"
 
 # aliases and functions
 # Use per machine aliases for things I dont want in git
