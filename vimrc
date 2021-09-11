@@ -53,7 +53,7 @@ Plugin 'robertbasic/vim-hugo-helper'
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'kabouzeid/nvim-lspinstall'
 Plugin 'nvim-lua/completion-nvim'
-
+Plugin 'psf/black'
 
 "End Vundle
 call vundle#end()
