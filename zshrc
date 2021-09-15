@@ -12,9 +12,8 @@ source ~/zsh-snap/znap.zsh
 #Znap Theme
 znap prompt romkatv/powerlevel10k
 #Znap Plugins
-znap source MichaelAquilina/zsh-autoswitch-virtualenv
 znap source zsh-users/zsh-syntax-highlighting
-znap source kiurchv/asdf.plugin.zsh
+znap source MichaelAquilina/zsh-autoswitch-virtualenv
 
 export LANG="en_US.UTF-8"
 
