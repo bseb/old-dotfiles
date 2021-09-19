@@ -94,7 +94,7 @@ nnoremap <Leader>0 :10b<CR>
 "#################
 
 "Skyline
-let g:skyline_gitbranch = 1
+let g:skyline_fugitive = 1
 "Fugitive
 set statusline=%{fugitive#statusline()}
 "Ansible
