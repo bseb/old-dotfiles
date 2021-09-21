@@ -59,7 +59,7 @@ call vundle#end()
 
 filetype plugin on
 syntax on
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4 shiftwidth=4 
 let mapleader = "\<Space>"
 
 "###########
@@ -139,18 +139,6 @@ nnoremap <leader>r :call NumberToggle()<cr>
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.mdwn,*.md  set ft=markdown
 
 " LSP Config
-nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gi    <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> gD    <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> ge    <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
-nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> <leader>F    <cmd>lua vim.lsp.buf.formatting()<CR>
-nnoremap <silent> <leader>rn    <cmd>lua vim.lsp.buf.rename()<CR>
-
-nnoremap <silent> <leader>a <cmd>lua vim.lsp.buf.code_action()<CR>
-xmap <silent> <leader>a <cmd>lua vim.lsp.buf.range_code_action()<CR>
-
 sign define LspDiagnosticsSignError text=🔴
 sign define LspDiagnosticsSignWarning text=🟠
 sign define LspDiagnosticsSignInformation text=🔵
