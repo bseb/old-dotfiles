@@ -77,6 +77,9 @@ else
     alias  sshKeyUnlock="eval `ssh-agent -s` ; ssh-add"
 fi
 
+# nnn config
+export NNN_OPTS="eEnrx"
+export NNN_TMPFILE='/tmp/.lastd'
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
 export TERM=xterm-256color

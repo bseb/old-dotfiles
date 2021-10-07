@@ -38,7 +38,6 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugins Managed by Vundle
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround.git'
-Plugin 'scrooloose/nerdtree'
 Plugin 'ourigen/skyline.vim'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'plasticboy/vim-markdown'
@@ -53,13 +52,15 @@ Plugin 'robertbasic/vim-hugo-helper'
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'kabouzeid/nvim-lspinstall'
 Plugin 'nvim-lua/completion-nvim'
+Plugin 'luukvbaal/nnn.nvim'
+
 
 "End Vundle
 call vundle#end()
 
 filetype plugin on
 syntax on
-set tabstop=4 shiftwidth=4 
+set tabstop=4 shiftwidth=4
 let mapleader = "\<Space>"
 
 "###########
@@ -112,8 +113,6 @@ set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
 set shortmess+=c
 
-"NerdTree
-map <F2> :NERDTreeToggle<CR>
 "
 " fzf.vim
 let g:fzf_files_options =
@@ -144,3 +143,8 @@ sign define LspDiagnosticsSignWarning text=🟠
 sign define LspDiagnosticsSignInformation text=🔵
 sign define LspDiagnosticsSignHint text=🟢
 luafile ~/.vim/lsp_config.lua
+" nnn-vim
+map <F2> :NnnExplorer<CR>
+lua << EOF
+require("nnn").setup()
+EOF
