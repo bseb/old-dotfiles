@@ -43,9 +43,9 @@ setw -g mode-style bg=colour6,fg=colour0
 
 
 #-------------------------------
-# set scrollback history to 1000|
+# set scrollback history to 10000|
 #-------------------------------
-set -g history-limit 1000
+set -g history-limit 10000
 #---------
 #movement|
 #--------
