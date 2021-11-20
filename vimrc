@@ -28,38 +28,30 @@ imap jk <Esc>
 "########
 "Plugins#
 "#######
-"Vundle requirements
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-"Start Vundle
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-"Plugins Managed by Vundle
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround.git'
-Plugin 'ourigen/skyline.vim'
-Plugin 'chase/vim-ansible-yaml'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'martinda/Jenkinsfile-vim-syntax'
-Plugin 'stephpy/vim-yaml'
-Plugin 'jamessan/vim-gnupg'
-Plugin 'robertbasic/vim-hugo-helper'
-Plugin 'neovim/nvim-lspconfig'
-Plugin 'kabouzeid/nvim-lspinstall'
-Plugin 'nvim-lua/completion-nvim'
-Plugin 'luukvbaal/nnn.nvim'
+"Start Vim-plug
+call plug#begin()
+"Plugins
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'ourigen/skyline.vim'
+Plug 'chase/vim-ansible-yaml'
+Plug 'plasticboy/vim-markdown'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'stephpy/vim-yaml'
+Plug 'jamessan/vim-gnupg'
+Plug 'robertbasic/vim-hugo-helper'
+Plug 'neovim/nvim-lspconfig'
+Plug 'luukvbaal/nnn.nvim'
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'williamboman/nvim-lsp-installer'
 
 
-"End Vundle
-call vundle#end()
+call plug#end()
 
-filetype plugin on
-syntax on
 set tabstop=4 shiftwidth=4
 let mapleader = "\<Space>"
 
@@ -102,18 +94,7 @@ set statusline=%{fugitive#statusline()}
 au BufRead,BufNewFile */ansible/*.yml set filetype=ansible
 au BufRead,BufNewFile */ansible/*.yaml set filetype=ansible
 let g:ansible_unindent_after_newline = 1
-"Completion
-" Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert,noselect
-
-" Avoid showing message extra message when using completion
-set shortmess+=c
-
-"
 " fzf.vim
 let g:fzf_files_options =
       \ '--preview-window top:60% ' .

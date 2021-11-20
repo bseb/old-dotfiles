@@ -28,7 +28,8 @@ ln -sf ~/dotfiles/vimrc ~/.vimrc
 ln -sf ~/dotfiles/vimrc ~/.vim/init.vim
 ln -sf ~/dotfiles/nvim/lsp_config.lua ~/.vim/lsp_config.lua
 ln -sF ~/.vim ~/.config/nvim
-/usr/bin/git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 #Add tmux config
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
