@@ -18,7 +18,7 @@ set-window-option -g window-status-current-style fg=green
 set -g status-interval 2
 set -g status-justify left
 set-option -g status-right-length 140
-set -g status-right '#(hostname)|🌐:#(curl icanhazip.com)|🔋:#{battery_percentage}|%a %h-%d %H:%M '
+set -g status-right '#(hostname)|CPU:#{cpu_percentage}|RAM:#{ram_percentage}|🌐:#(curl icanhazip.com)|#{battery_icon}:#{battery_percentage}|%a %h-%d %H:%M '
 bind-key b set-option status
 
 #--------------------------------------------------
@@ -31,7 +31,8 @@ set -g base-index 1
 # panes
 set -g pane-border-style fg=colour0
 set -g pane-active-border-style fg=colour239
-
+bind-key a command-prompt -p "join pane from:"  "join-pane -s '%%'"
+bind-key m command-prompt -p "send pane to:"  "join-pane -t '%%'"
 
 # messaging
 set -g message-style fg=black,bg=yellow
@@ -46,6 +47,7 @@ setw -g mode-style bg=colour6,fg=colour0
 # set scrollback history to 10000|
 #-------------------------------
 set -g history-limit 10000
+
 #---------
 #movement|
 #--------
@@ -53,10 +55,10 @@ set -g history-limit 10000
 bind | split-window -h
 bind - split-window -v
 
-bind-key J resize-pane -D 5
-bind-key K resize-pane -U 5
-bind-key H resize-pane -L 5
-bind-key L resize-pane -R 5
+bind-key J resize-pane -D 10
+bind-key K resize-pane -U 10
+bind-key H resize-pane -L 10
+bind-key L resize-pane -R 10
 
 bind-key M-j resize-pane -D
 bind-key M-k resize-pane -U
@@ -101,9 +103,9 @@ set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'schasse/tmux-jump'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-battery'
+set -g @plugin 'tmux-plugins/tmux-cpu'
 
-
-set -g @jump-key 's'
+set -g @jump-key 'q'
 
 #-----------------
 # Install Plugins|

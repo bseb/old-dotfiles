@@ -47,12 +47,11 @@ alias gco="git checkout"
 alias uncommit="reset --soft HEAD^"
 alias unstage="reset"
 alias staged="diff --cached"
-if [[ -a $(which hub) ]]
+if [[ -a $(which gh) ]]
 then
-    eval $( hub alias -s)
-    alias gpr="hub pull-request"
-    alias gpl="hub sync"
-    alias gci="hub ci-status"
+    alias gpr="gh pr create"
+    alias gpl="gh repo sync"
+    alias gci="gh pr checks"
 fi
 cdt() {
     cd `git rev-parse --show-toplevel`
