@@ -105,7 +105,7 @@ set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-battery'
 set -g @plugin 'tmux-plugins/tmux-cpu'
 
-set -g @jump-key 's'
+set -g @jump-key 'q'
 
 #-----------------
 # Install Plugins|

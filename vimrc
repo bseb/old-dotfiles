@@ -118,6 +118,8 @@ nnoremap <leader>r :call NumberToggle()<cr>
 
 au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.mdwn,*.md  set ft=markdown
 
+" COQ
+map <F3> :COQnow<CR>
 " LSP Config
 sign define LspDiagnosticsSignError text=🔴
 sign define LspDiagnosticsSignWarning text=🟠
