@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Use homebrew stuff
-export PATH="/usr/local/bin:/usr/local/opt/curl/bin:$PATH"
+export PATH="~/bin:/usr/local/bin:/usr/local/opt/curl/bin:$PATH"
 #Load Znap
 source ~/zsh-snap/znap.zsh
 #Znap Theme
@@ -79,22 +79,17 @@ fi
 # nnn config
 export NNN_OPTS="eEnrx"
 export NNN_TMPFILE='/tmp/.lastd'
+
 #Fix tab completion weirdness
 export LC_ALL=en_US.UTF-8
 export TERM=xterm-256color
+
 #Add fuzzy finder support
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Silly Weather Function
 weather() {
     curl http://v2.wttr.in/$1
 }
-
-# Set BUNNYPATH for Bash Bunny updates
-
-EXPECTED_LOCATION=/Volumes/BashBunny
-if [[ -d $EXPECTED_LOCATION ]]; then
-    export BUNNYPATH=$EXPECTED_LOCATION
-fi
 
 # OpenSSL Aliases for stuff I forget all the time and have to look up
 s_client() {
@@ -116,27 +111,3 @@ fi
 # Case-insensitive autocomplete
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 setopt no_list_ambiguous
-
-#
-#Axiom config
-
-if [ -e ~/.axiom ]; then
-    export PATH="$PATH:$HOME/.axiom/interact"
-    source /home/ben/.axiom/functions/autocomplete.zsh
-    compdef _axiom-ssh axiom-rm
-    compdef _axiom-ssh axiom-ssh
-    compdef _axiom-ssh axiom-select
-    compdef _axiom-ssh axiom-backup
-    compdef _axiom-ssh axiom-vpn
-    compdef _axiom-restore axiom-restore
-    compdef _axiom-deploy axiom-deploy
-    export PATH="$PATH:$HOME/.axiom/interact"
-    source /home/ben/.axiom/functions/autocomplete.zsh
-    compdef _axiom-ssh axiom-rm
-    compdef _axiom-ssh axiom-ssh
-    compdef _axiom-ssh axiom-select
-    compdef _axiom-ssh axiom-backup
-    compdef _axiom-ssh axiom-vpn
-    compdef _axiom-restore axiom-restore
-    compdef _axiom-deploy axiom-deploy
-fi
