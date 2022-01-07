@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Use homebrew stuff
-export PATH="~/bin:/usr/local/bin:/usr/local/opt/curl/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/curl/bin:$PATH"
 #Load Znap
 source ~/zsh-snap/znap.zsh
 #Znap Theme
