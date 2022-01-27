@@ -44,6 +44,7 @@ export PATH=$GOPATH/bin:$PATH
 alias gps="git push -u"
 alias gpl="git pull"
 alias gco="git checkout"
+alias gprune="git remote prune origin"
 alias uncommit="reset --soft HEAD^"
 alias unstage="reset"
 alias staged="diff --cached"
