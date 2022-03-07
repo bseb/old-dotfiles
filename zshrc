@@ -112,3 +112,12 @@ fi
 # Case-insensitive autocomplete
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 setopt no_list_ambiguous
+
+
+# Bookmarks
+# https://threkk.medium.com/how-to-use-bookmarks-in-bash-zsh-6b8074e40774
+mkdir ~/.bookmarks
+if [ -d "$HOME/.bookmarks" ]; then
+    export CDPATH=".:$HOME/.bookmarks:/"
+    alias goto="cd -P"
+fi
