@@ -15,6 +15,7 @@ if [[ $( uname ) == 'Darwin' ]]; then
 fi
 
 #Shell Setup.
+mkdir ~/bin
 if [[ ! -e ~/zsh-snap/znap.zsh ]]; then
     git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/zsh-snap
 fi
@@ -34,6 +35,7 @@ curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --c
 #Add tmux config
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -sf ~/dotfiles/tmux ~/.tmux.conf
+ln -sf ~/dotfiles/scripts/tmuxvpn.sh ~/bin/tmuxvpn.sh
 
 # Git config
 

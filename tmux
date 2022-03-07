@@ -13,12 +13,12 @@ bind r source-file ~/.tmux.conf
 #-------------------
 set -g status-style fg=red,bg=black
 set-option -g status-position top
-set -g status-justify left
 set-window-option -g window-status-current-style fg=green
 set -g status-interval 2
 set -g status-justify left
 set-option -g status-right-length 140
-set -g status-right '#(hostname)|CPU:#{cpu_percentage}|RAM:#{ram_percentage}|🌐:#(curl icanhazip.com)|#{battery_icon}:#{battery_percentage}|%a %h-%d %H:%M '
+set -g status-right '#(hostname)|CPU:#{cpu_percentage}|RAM:#{ram_percentage}|🌐: #(~/bin/tmuxvpn.sh)|#{battery_icon}:#{battery_percentage}|%a %h-%d %H:%M '
+
 bind-key b set-option status
 
 #--------------------------------------------------
