@@ -116,8 +116,8 @@ setopt no_list_ambiguous
 
 # Bookmarks
 # https://threkk.medium.com/how-to-use-bookmarks-in-bash-zsh-6b8074e40774
-mkdir ~/.bookmarks
-if [ -d "$HOME/.bookmarks" ]; then
-    export CDPATH=".:$HOME/.bookmarks:/"
-    alias goto="cd -P"
+if [ ! -d "$HOME/.bookmarks" ]; then
+    mkdir ~/.bookmarks
 fi
+export CDPATH=".:$HOME/.bookmarks:/"
+alias goto="cd -P"
