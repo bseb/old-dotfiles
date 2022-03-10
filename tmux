@@ -17,7 +17,7 @@ set-window-option -g window-status-current-style fg=green
 set -g status-interval 2
 set -g status-justify left
 set-option -g status-right-length 140
-set -g status-right '#(hostname)|CPU:#{cpu_percentage}|RAM:#{ram_percentage}|🌐: #(~/bin/tmuxvpn.sh)|#{battery_icon}:#{battery_percentage}|%a %h-%d %H:%M '
+set -g status-right '#(hostname)|CPU:#{cpu_percentage}|RAM:#{ram_percentage}|🌐:#(~/bin/tmuxvpn.sh)|#{battery_icon}:#{battery_percentage}|%a %h-%d %H:%M '
 
 bind-key b set-option status
 
