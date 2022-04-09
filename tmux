@@ -1,8 +1,9 @@
 #---------------------------------------------------
-#Set the prefix to the right thing, clearly C-a     |
+#Set the prefix to ctrl + space     |
 #----------------------------------------------------
 unbind C-b
-set -g prefix C-a
+set-option -g prefix C-Space
+bind-key C-Space send-prefix
 #-----------------------------------
 # force a reload of the config file|
 #-----------------------------------

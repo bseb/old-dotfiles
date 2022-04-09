@@ -121,3 +121,5 @@ if [ ! -d "$HOME/.bookmarks" ]; then
 fi
 export CDPATH=".:$HOME/.bookmarks:/"
 alias goto="cd -P"
+
+bindkey -e
